@@ -1,0 +1,86 @@
+#Hero {
+  height: 100vh;
+  width: 100%;
+  background: url(../../assets/background-logo-vector.svg) 100% fixed ;
+  transition: background 0.3s ease-in;
+  -webkit-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-inl;
+}
+
+#Hero section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: auto container-name auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#Hero div:not(.container-techstack) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#Hero h1,
+h2,
+p {
+  color: white;
+  /* margin: 5px; */
+}
+
+.container-name {
+  grid-area: 1/ 1;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-me {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.container-description {
+  height: 100%;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+.container-techstack {
+  width: 100%;
+  height: 100px;
+  background: #461a4e6a;
+}
+.container-techstack > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.techstack-images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.techstack-images img {
+  transition: width 0.2s;
+}
+
+@media screen and (width < 640px) {
+  .container-description {
+    width: 90%;
+  }
+
+  .techstack-images {
+    justify-content: space-evenly;
+  }
+
+  .techstack-images img {
+    width: 75px;
+    transition: width 0.2s;
+  }
+}

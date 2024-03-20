@@ -1,0 +1,116 @@
+#About {
+  height: 100vh;
+  width: 100%;
+}
+#About section {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+}
+
+section .about-section {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+section .motivation-section {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+.about-container {
+  flex: 2;
+  padding: 10px;
+}
+.motivation-container {
+  flex: 2;
+  padding: 10px;
+}
+
+.about-me-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  padding: 10px;
+}
+.about-me-img img {
+  border-radius: 50%;
+  width: 250px;
+}
+.motivation-socialmedia-images {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.motivation-socialmedia-images img {
+  width: 60px;
+}
+.social-media-img {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  width: 80%;
+  animation: orbitSocial-media-img 9s infinite linear;
+}
+
+.meta-img {
+  width: 20%;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  /* border: 2px solid black; */
+
+  transform: rotate(0deg);
+  animation-delay: 0;
+  animation: orbitSocial-media-img 9s infinite linear;
+}
+.users-group-img {
+  position: absolute;
+  
+}
+@keyframes snapchat {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSocial-media-img {
+  from {
+    -webkit-transform: rotateZ(0deg);
+  }
+
+  to {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (width < 640px) {
+}
+
+h1 {
+  color: white;
+}
+p {
+  font-size: 24px;
+}
