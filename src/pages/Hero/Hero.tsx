@@ -15,10 +15,10 @@ export default function Hero() {
           <h2>Full-Stack Developer</h2>
           <img className="img-me" src={me} />
           <div className="container-description">
-            <h2>
+            <p>
               Ervaren zelf geleerde Full-stack Developer met meer dan twee jaar
               ervaring in het ontwikkelen van schaalbare applicaties
-            </h2>
+            </p>
           </div>
         </div>
         <div className="container-techstack">

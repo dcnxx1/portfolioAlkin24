@@ -1,7 +1,8 @@
 #Hero {
   height: 100vh;
   width: 100%;
-  background: url(../../assets/background-logo-vector.svg) 100% fixed ;
+
+  background: url(../../assets/background-logo-vector.svg) 100% fixed;
   transition: background 0.3s ease-in;
   -webkit-transition: background 0.3s ease-in;
   -ms-transition: background 0.3s ease-inl;
@@ -28,7 +29,9 @@ p {
   color: white;
   /* margin: 5px; */
 }
-
+p {
+  font-weight: normal;
+}
 .container-name {
   grid-area: 1/ 1;
   height: 100%;
