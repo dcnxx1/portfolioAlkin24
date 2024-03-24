@@ -1,27 +1,25 @@
-#Card {
-  border: 2px solid black;
+.project-card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  aspect-ratio: 1;
+  border-radius: 25px;
+}
+.project-card img {
+  width: 350px;
+  height: 350px;
+}
+span {
+  color: white;
+  font-weight: 100;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.link-button {
-  border: 2px solid white;
-  border-radius: 5px;
-
+.card-description {
   padding: 10px;
-  padding-inline: 20px;
-}
-
-.link-button {
-  color: white;
-  text-decoration: none;
-  transition: background-color 1s ease linear;
-}
-
-.link-button :visited {
-  color: white;
-  text-decoration: none;
-}
-
-.link-button:hover {
-  background-color: white;
-  color: black;
 }
