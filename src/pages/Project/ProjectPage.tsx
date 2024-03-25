@@ -7,14 +7,7 @@ import IMacShopee from "../../assets/project-assets/shopee/iMac_shopee.svg";
 import iPhoneKelli from "../../assets/project-assets/kelli/iPhone_kelli.svg";
 import iMacQrCode from "../../assets/project-assets/qrCode/iMacQrCode.svg";
 import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.svg";
-import { useState } from "react";
 export default function ProjectPage() {
-  const [isOpenedTurnt, setIsOpenedTurnt] = useState(false);
-  const onPressTurnt = () => {
-    console.log("Shit pressed", isOpenedTurnt);
-    setIsOpenedTurnt(!isOpenedTurnt);
-  };
-
   return (
     <div id="Project">
       <div className="project__header">
@@ -22,7 +15,9 @@ export default function ProjectPage() {
       </div>
       <section className={"grid-normal"}>
         <Card
-          onClickLearnMore={onPressTurnt}
+          onClickLearnMore={() => {
+            console.log("pressed");
+          }}
           className="turnt"
           description="Ontdek muziek in 30 seconden"
           imgSource={IphoneTurnt}

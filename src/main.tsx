@@ -4,14 +4,20 @@ import App from "./App/App.tsx";
 import "normalize-css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Nav from "./nav/Nav.tsx";
+import Turnt from "./pages/Projects/Turnt.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/project",
-    element: <div>Yo</div>,
+    path: "/projects",
+    element: <Turnt />,
+    children: [
+      {
+        path: "turnt",
+      },
+    ],
   },
 ]);
 

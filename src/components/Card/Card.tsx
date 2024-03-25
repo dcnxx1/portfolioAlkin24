@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./Card.css";
 
 interface Props {
   title: string;

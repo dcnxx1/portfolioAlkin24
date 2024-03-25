@@ -17,6 +17,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  align-items: flex-start;
 }
 
 #Project section {
@@ -24,7 +25,7 @@ h1 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: center;
+
   align-items: center;
   gap: 20px 20px;
 }
@@ -37,7 +38,8 @@ h1 {
 }
 .alktunes img {
   /* aspect-ratio: 19 / 8; */
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
 }
 .shopee {
   background: linear-gradient(#ec6d19, #7a3000);
@@ -62,4 +64,10 @@ h1 {
 
 .cacao-chat img {
   width: 50%;
+}
+
+@media screen and (width < 1200px) {
+  .grid-normal {
+    background: red;
+  }
 }
