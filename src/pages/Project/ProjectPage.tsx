@@ -15,6 +15,7 @@ export default function ProjectPage() {
       </div>
       <section className={"grid-normal"}>
         <Card
+          linkTo="projects/turnt"
           onClickLearnMore={() => {
             console.log("pressed");
           }}

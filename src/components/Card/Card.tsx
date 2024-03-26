@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 interface Props {
@@ -6,6 +7,7 @@ interface Props {
   imgSource: any;
   onClickLearnMore: () => void;
   className?: string;
+  linkTo?: string;
 }
 
 export default function Card({
@@ -14,6 +16,7 @@ export default function Card({
   imgSource,
   className,
   onClickLearnMore,
+  linkTo = "/",
 }: Props) {
   return (
     <div className={`project-card  ${className}`}>
@@ -21,7 +24,9 @@ export default function Card({
       <div className="card-description">
         <h2>{title}</h2>
         <p>{description}</p>
-        <span onClick={onClickLearnMore}>Leer meer</span>
+        <Link to={linkTo}>
+          <span onClick={onClickLearnMore}>Leer meer</span>
+        </Link>
       </div>
     </div>
   );
