@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Video = styled.video.attrs({
-  autoPlay: true,
   muted: true,
   controls: false,
   loop: true,

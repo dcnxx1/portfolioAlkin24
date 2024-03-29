@@ -6,9 +6,13 @@ import DemoAddToPlaylist from "../../../assets/project-assets/turnt/videos/DemoA
 import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
 
 import patterns from "../../../assets/background-logo-vector.svg";
-import Video from "../../../components/Video/Video";
+import Video, { InViewContainer } from "../../../components/Video/Video";
+import { useInView } from "react-intersection-observer";
 
 export default function Turnt() {
+  const [ref, inView] = useInView({
+    delay: 2000,
+  });
   return (
     <Container
       props={{
@@ -38,13 +42,13 @@ export default function Turnt() {
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
-            <Video source={DemoHomeScreen} />
+            <InViewContainer source={DemoHomeScreen} />
           </ContentContainer>
         </Grid.Item>
 
         <Grid.Item>
           <ContentContainer style={{ overflow: "hidden", lineHeight: 0 }}>
-            <Video source={DemoAddToPlaylist} />
+            <InViewContainer source={DemoAddToPlaylist} />
           </ContentContainer>
         </Grid.Item>
         <Grid.Item>
@@ -74,7 +78,7 @@ export default function Turnt() {
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
-            <Video source={DemoUpload} />
+            <InViewContainer source={DemoUpload} />
           </ContentContainer>
         </Grid.Item>
         <Grid.Item style={{ width: "100%", border: "2px solid white" }}>
