@@ -32,7 +32,7 @@ export default function Turnt() {
               <span style={{ color: "red" }}>NestJS</span>, geïnspireerd door
               TikTok. Gebruikers kunnen moeiteloos nieuwe liedjes en artiesten
               ontdekken en met een druk op de knop de beste 30 seconden
-              beluisteren, geselecteerd door de artiesten zelf.
+              beluisteren, geselecteerd door de artiesten zelf
             </DescriptionText>
           </ContentContainer>
         </Grid.Item>
