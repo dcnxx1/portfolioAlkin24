@@ -12,8 +12,9 @@ export const HeaderText = styled.h1`
   color: white;
 `;
 
-export const DescriptionText = styled.h2`
+export const DescriptionText = styled.h3`
   color: white;
+  font-weight: normal;
 `;
 
 export const PhoneImage = styled.img`
