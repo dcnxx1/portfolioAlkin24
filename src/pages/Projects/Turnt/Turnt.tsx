@@ -1,14 +1,20 @@
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
-import IPhoneTurntHomeScreen from "../../../assets/project-assets/turnt/iphoneTurntHomeScreen.mp4";
+import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
+import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
+import DemoAddToPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
 import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
+
+import patterns from "../../../assets/background-logo-vector.svg";
+import Video from "../../../components/Video/Video";
 
 export default function Turnt() {
   return (
     <Container
       props={{
         style: {
-          backgroundColor: "purple",
+          backgroundColor: "#3e27b3",
+          backgroundImage: `url(${patterns})`,
         },
       }}
     >
@@ -32,43 +38,13 @@ export default function Turnt() {
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
-            <video
-              muted
-              src={IPhoneTurntHomeScreen}
-              loop={true}
-              autoPlay={true}
-              style={{
-                background: "purple",
-                width: "300px",
-              }}
-            >
-              <source
-                style={{ width: "400px", height: "400px" }}
-                src={IPhoneTurntHomeScreen}
-                type="sample/mp4"
-              />
-            </video>
+            <Video source={DemoHomeScreen} />
           </ContentContainer>
         </Grid.Item>
 
         <Grid.Item>
-          <ContentContainer>
-            <video
-              muted
-              src={IPhoneTurntHomeScreen}
-              loop={true}
-              autoPlay={true}
-              style={{
-                background: "purple",
-                width: "300px",
-              }}
-            >
-              <source
-                style={{ width: "400px", height: "400px" }}
-                src={IPhoneTurntHomeScreen}
-                type="sample/mp4"
-              />
-            </video>
+          <ContentContainer style={{ overflow: "hidden", lineHeight: 0 }}>
+            <Video source={DemoAddToPlaylist} />
           </ContentContainer>
         </Grid.Item>
         <Grid.Item>
@@ -98,22 +74,7 @@ export default function Turnt() {
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
-            <video
-              muted
-              src={IPhoneTurntHomeScreen}
-              loop={true}
-              autoPlay={true}
-              style={{
-                background: "purple",
-                width: "300px",
-              }}
-            >
-              <source
-                style={{ width: "400px", height: "400px" }}
-                src={IPhoneTurntHomeScreen}
-                type="sample/mp4"
-              />
-            </video>
+            <Video source={DemoUpload} />
           </ContentContainer>
         </Grid.Item>
         <Grid.Item style={{ width: "100%", border: "2px solid white" }}>

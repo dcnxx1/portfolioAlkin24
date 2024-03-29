@@ -7,7 +7,10 @@ import IMacShopee from "../../assets/project-assets/shopee/iMac_shopee.svg";
 import iPhoneKelli from "../../assets/project-assets/kelli/iPhone_kelli.svg";
 import iMacQrCode from "../../assets/project-assets/qrCode/iMacQrCode.svg";
 import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.svg";
-export default function ProjectPage() {
+
+interface Props {}
+
+export default function ProjectPage({}: Props) {
   return (
     <div id="Project">
       <div className="project__header">
