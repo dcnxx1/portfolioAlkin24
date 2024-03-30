@@ -15,13 +15,13 @@ export const InViewContainer = ({ source, style }: Props) => {
   }, [isPlaying]);
 
   return (
-    <InView trackVisibility onChange={handleIsPlaying}>
+    <InView onChange={handleIsPlaying}>
       {({ inView, ref, entry }) => (
         <>
           <Styled.Video
             as="video"
             ref={ref}
-            autoPlay={inView}
+            autoPlay={inView ?? true}
             style={style}
             src={source}
           >

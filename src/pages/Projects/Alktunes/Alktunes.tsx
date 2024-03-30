@@ -9,6 +9,8 @@ import {
 import backgroundVector from "../../../assets/background-logo-vector.svg";
 import { InViewContainer } from "../../../components/Video/Video";
 import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/AlktunesHomeDemo.mp4";
+import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
+import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
 import GithubButton from "../../../components/Button/GithubButton";
 export default function Alktunes() {
   return (
@@ -53,7 +55,7 @@ export default function Alktunes() {
               style={{
                 width: "100%",
               }}
-              source={DemoHomeScreen}
+              source={DemoArtistPage}
             />
           </Grid.Item>
           <Grid.Item>
@@ -99,7 +101,7 @@ export default function Alktunes() {
               style={{
                 width: "100%",
               }}
-              source={DemoHomeScreen}
+              source={DemoSearchPage}
             />
           </Grid.Item>
           <Grid.Item
