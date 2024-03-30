@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import Nav from "./nav/Nav.tsx";
 import Turnt from "./pages/Projects/Turnt/Turnt.tsx";
+import Alktunes from "./pages/Projects/Alktunes/Alktunes.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />} />
         <Route path="/projects/">
           <Route path="turnt" element={<Turnt />} />
+          <Route path="alktunes" element={<Alktunes />} />
         </Route>
       </Routes>
     </BrowserRouter>

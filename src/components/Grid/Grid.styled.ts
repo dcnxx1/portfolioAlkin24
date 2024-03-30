@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const GridContainer = styled.div`
   width: 100%;
@@ -7,11 +7,12 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
-  grid-auto-rows: 1fr 1fr;
-  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr 
 `;
 
 export const GridItem = styled.div`
   height: auto;
   min-height: calc(100vh - 120px);
+  width: 100%;
 `;

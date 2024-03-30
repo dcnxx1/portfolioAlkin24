@@ -8,10 +8,15 @@ export const Video = styled.video.attrs({
   disableRemotePlayback: true,
 })`
   object-fit: cover;
-  border-radius: 80px;
+
   padding-bottom: inline 10px;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
   outline: none;
+  pointer-events: none !important;
 `;
 
 export const Source = styled.source.attrs({

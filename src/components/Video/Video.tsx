@@ -13,7 +13,7 @@ export const InViewContainer = ({ source, style }: Props) => {
   const handleIsPlaying = useCallback(() => {
     setPlaying(!isPlaying);
   }, [isPlaying]);
-  
+
   return (
     <InView trackVisibility onChange={handleIsPlaying}>
       {({ inView, ref, entry }) => (

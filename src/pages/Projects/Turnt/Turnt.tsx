@@ -7,7 +7,10 @@ import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
 
 import patterns from "../../../assets/background-logo-vector.svg";
 import { InViewContainer } from "../../../components/Video/Video";
+import { CSSProperties } from "styled-components";
 
+import code from "../../../assets/code.png";
+import GithubButton from "../../../components/Button/GithubButton";
 export default function Turnt() {
   return (
     <Container
@@ -88,18 +91,41 @@ export default function Turnt() {
             <DescriptionText>
               Voeg liedjes toe aan je afspeellijst en zie ze gelijk terug in je
               playlist. Deze technologie wordt aangedreven door React Query.
-              Zodat jij alle wijzingen die jij maakt binnen je playlist gelijk
-              weer kunt terugzien.
+              Zodat jij alle wijzingen die jij maakt in je playlist gelijk weer
+              kunt terugzien.
             </DescriptionText>
           </ContentContainer>
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
             <HeaderText>Upload je muziekvideo of audio</HeaderText>
+
             <DescriptionText>
-              Selecteer de beste 30 seconden die jij wilt dat de gebruiker
-              beluistert. Kies een genre, kies een cover foto en upload je
-              bestand.
+              Breng je muziek tot leven door je video- of audiobestand te
+              uploaden en selecteer de perfecte 30 seconden die je wilt delen
+              met gebruikers.
+            </DescriptionText>
+            <DescriptionText>
+              Personaliseer je nummer verder door een passende coverfoto te
+              kiezen die aansluit bij de sfeer en het genre, waardoor je
+              gemakkelijker te vinden bent voor je publiek
+            </DescriptionText>
+            <span
+              style={{ display: "block", background: "white", height: 2 }}
+            ></span>
+            <DescriptionText>
+              Dankzij de kracht van FFMpeg wordt automatisch een tijdlijn
+              gecreëerd voor elke video, waardoor elke upload een unieke
+              ervaring wordt
+            </DescriptionText>
+            <DescriptionText>
+              De geselecteerde tijd die de artiest kiest wordt als metadata aan
+              de video toegevoegd. Vervolgens wordt de video verzonden naar de
+              S3-bucket, die een Lambda-functie activeert met de metadata. De
+              Lambda-functie start AWS MediaConvert op met de metadata, zodat de
+              30 seconden clip in m3u8-formaat wordt gecreëerd. Nadat dit proces
+              is voltooid, wordt de video teruggeplaatst in de S3-bucket, zodat
+              de React Native-app deze kan ophalen met CloudFront CDN
             </DescriptionText>
           </ContentContainer>
         </Grid.Item>
@@ -108,10 +134,19 @@ export default function Turnt() {
             <InViewContainer source={DemoUpload} />
           </ContentContainer>
         </Grid.Item>
-        <Grid.Item style={{ width: "200%", border: "2px solid white" }}>
-          <HeaderText>Yo</HeaderText>
+        <Grid.Item style={gridStyle}>
+          <GithubButton href="https://github.com/dcnxx1/Turnt" title="Code" />
         </Grid.Item>
       </Grid>
     </Container>
   );
 }
+
+const gridStyle: CSSProperties = {
+  width: "100%",
+  justifyContent: "center",
+  alignItems: "center",
+  display: "flex",
+
+  gridColumn: "span 2",
+};

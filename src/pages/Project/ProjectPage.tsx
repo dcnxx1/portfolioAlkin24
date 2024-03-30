@@ -29,6 +29,7 @@ export default function ProjectPage({}: Props) {
         />
         <Card
           className="alktunes"
+          linkTo="projects/alktunes"
           imgSource={LaptopAlktunes}
           onClickLearnMore={() => console.log("yoo...")}
           description="Luister naar je favoriete artiesten"
