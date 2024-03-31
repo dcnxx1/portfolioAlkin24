@@ -11,12 +11,13 @@ import { CSSProperties } from "styled-components";
 
 import code from "../../../assets/code.png";
 import GithubButton from "../../../components/Button/GithubButton";
+import TagList from "../../../components/Tags/TagList";
 export default function Turnt() {
   return (
     <Container
       props={{
         style: {
-          backgroundColor: "#3e27b3",
+          backgroundColor: "#3e27b9",
           backgroundImage: `url(${patterns})`,
         },
       }}
@@ -127,6 +128,22 @@ export default function Turnt() {
               is voltooid, wordt de video teruggeplaatst in de S3-bucket, zodat
               de React Native-app deze kan ophalen met CloudFront CDN
             </DescriptionText>
+            <TagList>
+              <TagList.Tag tagName="Bare React Native" />
+              <TagList.Tag tagName="Javascript" />
+              <TagList.Tag tagName="AWS" />
+              <TagList.Tag tagName="FFmpeg" />
+              <TagList.Tag tagName="S3" />
+              <TagList.Tag tagName="Lambda" />
+              <TagList.Tag tagName="AWS MediaConvert" />
+              <TagList.Tag tagName="CloudFront" />
+              <TagList.Tag tagName="Typescript" />
+              <TagList.Tag tagName="Github" />
+              <TagList.Tag tagName="Photoshop" />
+              <TagList.Tag tagName="Adobe Premiere Pro" />
+              <TagList.Tag tagName="Figma" />
+              <TagList.Tag tagName="Excalidraw" />
+            </TagList>
           </ContentContainer>
         </Grid.Item>
         <Grid.Item>

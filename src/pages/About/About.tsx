@@ -6,14 +6,15 @@ import instagram from "../../assets/instagram.svg";
 import snapchat from "../../assets/facebook.svg";
 import meta from "../../assets/meta.png";
 import group from "../../assets/group (1).png";
+import { DescriptionText, HeaderText } from "../Projects/Turnt/Turnt.styled";
 export default function About(): JSX.Element {
   return (
     <div id="About">
       <section>
         <div className="about-section">
           <div className="about-container">
-            <h1>Over mij</h1>
-            <p>
+            <HeaderText>Over mij</HeaderText>
+            <DescriptionText>
               Ik ben een zelfgeleerde full-stack ontwikkelaar met meer dan 2
               jaar ervaring in het ontwerpen en bouwen van applicaties. <br />
               <br /> Mijn focus ligt voornamelijk op het creëren van schaalbare
@@ -24,7 +25,7 @@ export default function About(): JSX.Element {
               Wat mij drijft, is de mogelijkheid om applicaties te ontwikkelen
               die een groot aantal mensen kunnen bereiken en positief
               beïnvloeden.
-            </p>
+            </DescriptionText>
           </div>
           <div className="about-me-img">
             <img src={me} />
@@ -43,8 +44,8 @@ export default function About(): JSX.Element {
             </div>
           </div>
           <div className="motivation-container">
-            <h1>Motivatie</h1>
-            <p>
+            <HeaderText>Motivatie</HeaderText>
+            <DescriptionText>
               Ik haal veel inspiratie uit bedrijven zoals Snapchat, Instagram,
               Whatsapp en Facebook. <br /> <br />
               Deze bedrijven hebben bewezen een enorme impact te hebben op
@@ -52,7 +53,7 @@ export default function About(): JSX.Element {
               Mijn ultieme doel is om ook zo'n baanbrekende applicatie te
               ontwikkelen die een vergelijkbare impact heeft en het leven van
               veel mensen verbetert.
-            </p>
+            </DescriptionText>
           </div>
         </div>
       </section>

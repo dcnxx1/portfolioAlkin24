@@ -12,6 +12,7 @@ import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/Alktun
 import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
 import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
 import GithubButton from "../../../components/Button/GithubButton";
+import TagList from "../../../components/Tags/TagList";
 export default function Alktunes() {
   return (
     <Container
@@ -95,6 +96,24 @@ export default function Alktunes() {
               repellat officiis, animi delectus, odio quis amet sed sit
               sapiente?
             </DescriptionText>
+            <TagList>
+              <TagList.Tag tagName="React" />
+              <TagList.Tag tagName="Javascript" />
+              <TagList.Tag tagName="Figma" />
+              <TagList.Tag tagName="Excalidraw" />
+              <TagList.Tag tagName="AWS" />
+              <TagList.Tag tagName="S3" />
+              <TagList.Tag tagName="Lambda" />
+              <TagList.Tag tagName="AWS API Gateway" />
+              <TagList.Tag tagName="MySQL" />
+              <TagList.Tag tagName="NodeJS" />
+              <TagList.Tag tagName="Express" />
+            </TagList>
+            <TagList title="Bronnen">
+              <GithubButton href="#" title="Front-End" />
+              <GithubButton href="#" title="Back-End" />
+              <GithubButton href="#" title="Demo Video" />
+            </TagList>
           </Grid.Item>
           <Grid.Item>
             <InViewContainer

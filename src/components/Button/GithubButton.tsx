@@ -2,22 +2,25 @@ import { DescriptionText } from "../../pages/Projects/Turnt/Turnt.styled";
 import codeIcon from "../../assets/code.png";
 interface Props {
   title: string;
-  href: string
+  href: string;
 }
 
 export default function GithubButton({ title, href }: Props) {
   return (
     <a
-    target="_blank"
+      target="_blank"
       style={{
-        display: "flex",
         gap: "20px",
+        display: "flex",
+        alignItems: "center",
+        width: "fit-content",
+
         justifyContent: "space-evenly",
         paddingInline: "10px",
       }}
       href={href}
     >
-      <img style={{ width: "50px" }} src={codeIcon} />
+      <img style={{ width: "30px", height: "30px" }} src={codeIcon} />
       <DescriptionText>{title}</DescriptionText>
     </a>
   );
