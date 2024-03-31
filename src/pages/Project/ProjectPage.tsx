@@ -43,6 +43,7 @@ export default function ProjectPage({}: Props) {
           title="Shopee"
         />
         <Card
+          linkTo="projects/kelli"
           onClickLearnMore={() => console.log("yoo...")}
           description="Laat je woorden tot leven komen"
           imgSource={iPhoneKelli}

@@ -13,22 +13,7 @@ import {
 import Nav from "./nav/Nav.tsx";
 import Turnt from "./pages/Projects/Turnt/Turnt.tsx";
 import Alktunes from "./pages/Projects/Alktunes/Alktunes.tsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/projects",
-    element: <Turnt />,
-    children: [
-      {
-        path: "turnt",
-      },
-    ],
-  },
-]);
+import Kelli from "./pages/Projects/Kelli/Kelli";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -39,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/projects/">
           <Route path="turnt" element={<Turnt />} />
           <Route path="alktunes" element={<Alktunes />} />
+          <Route path="kelli" element={<Kelli />} />
         </Route>
       </Routes>
     </BrowserRouter>
