@@ -14,6 +14,8 @@ import Nav from "./nav/Nav.tsx";
 import Turnt from "./pages/Projects/Turnt/Turnt.tsx";
 import Alktunes from "./pages/Projects/Alktunes/Alktunes.tsx";
 import Kelli from "./pages/Projects/Kelli/Kelli";
+import Foooter from "./components/Footer/Footer.tsx";
+import CacaoChat from "./pages/Projects/CacaoChat/CacaoChat.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -25,8 +27,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="turnt" element={<Turnt />} />
           <Route path="alktunes" element={<Alktunes />} />
           <Route path="kelli" element={<Kelli />} />
+          <Route path="cacaochat" element={<CacaoChat />} />
         </Route>
       </Routes>
+      <Foooter />
     </BrowserRouter>
   </React.StrictMode>
 );

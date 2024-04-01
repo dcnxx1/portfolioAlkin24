@@ -60,6 +60,7 @@ export default function ProjectPage({}: Props) {
         />
 
         <Card
+          linkTo="projects/cacaochat"
           onClickLearnMore={() => console.log("yoo...")}
           description="Chatten over de hele wereld"
           imgSource={SamsungCacaoChat}

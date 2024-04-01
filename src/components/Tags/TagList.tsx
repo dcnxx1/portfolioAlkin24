@@ -17,7 +17,6 @@ export default function TagList({ children, title = "Tags" }: Props) {
       <DescriptionText>{title}</DescriptionText>
       <div
         style={{
-          border: " 2px solid white",
           display: "flex",
           flexWrap: "wrap",
           alignContent: "flex-start",

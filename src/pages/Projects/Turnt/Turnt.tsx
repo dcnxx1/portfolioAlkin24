@@ -130,9 +130,13 @@ export default function Turnt() {
             </DescriptionText>
             <TagList>
               <TagList.Tag tagName="Bare React Native" />
+              <TagList.Tag tagName="Prisma" />
+              <TagList.Tag tagName="MySQL" />
+              <TagList.Tag tagName="Docker" />
               <TagList.Tag tagName="Javascript" />
               <TagList.Tag tagName="AWS" />
               <TagList.Tag tagName="FFmpeg" />
+              <TagList.Tag tagName="React Query" />
               <TagList.Tag tagName="S3" />
               <TagList.Tag tagName="Lambda" />
               <TagList.Tag tagName="AWS MediaConvert" />
@@ -144,15 +148,16 @@ export default function Turnt() {
               <TagList.Tag tagName="Figma" />
               <TagList.Tag tagName="Excalidraw" />
             </TagList>
+            <TagList title="Links">
+              <GithubButton href="#" title="Back-end" />
+              <GithubButton href="#" title="Front-end" />
+            </TagList>
           </ContentContainer>
         </Grid.Item>
         <Grid.Item>
           <ContentContainer>
             <InViewContainer source={DemoUpload} />
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item style={gridStyle}>
-          <GithubButton href="https://github.com/dcnxx1/Turnt" title="Code" />
         </Grid.Item>
       </Grid>
     </Container>

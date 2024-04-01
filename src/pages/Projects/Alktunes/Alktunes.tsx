@@ -23,43 +23,46 @@ export default function Alktunes() {
         },
       }}
     >
-      <InnerContainer>
-        <Grid>
-          <Grid.Item
-            style={{
-              border: "2px solid white",
-              flex: 1,
-            }}
-          >
-            <ContentContainer>
-              <HeaderText>Alktunes</HeaderText>
-              <h2>Luister naar je favoriete artiesten</h2>
-              <DescriptionText>
-                Alktunes is een web muziek applicatie die gebruikers de
-                mogelijkheid biedt om liedjes van bekende artiesten te
-                beluisteren.
-              </DescriptionText>
-            </ContentContainer>
-          </Grid.Item>
-          <Grid.Item style={{ border: "2px solid white" }}>
-            <ContentContainer>
-              <InViewContainer
-                style={{
-                  width: "100%",
-                }}
-                source={DemoHomeScreen}
-              />
-            </ContentContainer>
-          </Grid.Item>
-          <Grid.Item>
+      <Grid>
+        <Grid.Item
+          style={{
+            border: "2px solid white",
+            flex: 1,
+            
+          }}
+        >
+          <ContentContainer>
+            <HeaderText>Alktunes</HeaderText>
+            <h2>Luister naar je favoriete artiesten</h2>
+            <DescriptionText>
+              Alktunes is een web muziek applicatie die gebruikers de
+              mogelijkheid biedt om liedjes van bekende artiesten te
+              beluisteren.
+            </DescriptionText>
+          </ContentContainer>
+        </Grid.Item>
+        <Grid.Item style={{ border: "2px solid white" }}>
+          <ContentContainer>
+            <InViewContainer
+              style={{
+                width: "100%",
+              }}
+              source={DemoHomeScreen}
+            />
+          </ContentContainer>
+        </Grid.Item>
+        <Grid.Item>
+          <ContentContainer>
             <InViewContainer
               style={{
                 width: "100%",
               }}
               source={DemoArtistPage}
             />
-          </Grid.Item>
-          <Grid.Item>
+          </ContentContainer>
+        </Grid.Item>
+        <Grid.Item>
+          <ContentContainer>
             <h2>Ontdek de muziek van je favoriete artiesten</h2>
             <DescriptionText>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
@@ -76,8 +79,10 @@ export default function Alktunes() {
               ipsa, eveniet in ullam fuga aliquam natus nulla explicabo neque
               architecto est.
             </DescriptionText>
-          </Grid.Item>
-          <Grid.Item>
+          </ContentContainer>
+        </Grid.Item>
+        <Grid.Item>
+          <ContentContainer>
             <h2>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
               id eaque iure adipisci officiis unde!
@@ -108,47 +113,26 @@ export default function Alktunes() {
               <TagList.Tag tagName="MySQL" />
               <TagList.Tag tagName="NodeJS" />
               <TagList.Tag tagName="Express" />
+              <TagList.Tag tagName="SASS" />
             </TagList>
-            <TagList title="Bronnen">
+            <TagList title="Links">
               <GithubButton href="#" title="Front-End" />
               <GithubButton href="#" title="Back-End" />
               <GithubButton href="#" title="Demo Video" />
             </TagList>
-          </Grid.Item>
-          <Grid.Item>
+          </ContentContainer>
+        </Grid.Item>
+        <Grid.Item>
+          <ContentContainer>
             <InViewContainer
               style={{
                 width: "100%",
               }}
               source={DemoSearchPage}
             />
-          </Grid.Item>
-          <Grid.Item
-            style={{
-              gridColumn: "span 2",
-              border: " 2px solid white",
-              placeItems: "center",
-            }}
-          >
-            <ContentContainer
-              style={{
-                width: "100%",
-                alignSelf: "center",
-                border: "2px solid white",
-              }}
-            >
-              <GithubButton
-                href="https://github.com/dcnxx1/alktunes"
-                title="Front-end"
-              />
-              <GithubButton
-                href="https://github.com/dcnxx1/alktunes_server"
-                title="Back-end"
-              />
-            </ContentContainer>
-          </Grid.Item>
-        </Grid>
-      </InnerContainer>
+          </ContentContainer>
+        </Grid.Item>
+      </Grid>
     </Container>
   );
 }

@@ -101,21 +101,21 @@ export default function Kelli() {
               <TagList>
                 <TagList.Tag tagName="Expo" />
                 <TagList.Tag tagName="React Native" />
+                <TagList.Tag tagName="NestJS" />
                 <TagList.Tag tagName="AWS" />
                 <TagList.Tag tagName="Typescript" />
                 <TagList.Tag tagName="Cloud Computing" />
                 <TagList.Tag tagName="React" />
                 <TagList.Tag tagName="Full-Stack" />
                 <TagList.Tag tagName="Back-end" />
+                <TagList.Tag tagName="Excalidraw" />
+                <TagList.Tag tagName="Github" />
+                <TagList.Tag tagName="Figma" />
+              </TagList>
+              <TagList title="Links">
+                <GithubButton href="" title="Code" />
               </TagList>
             </ContentContainer>
-          </Grid.Item>
-          <Grid.Item
-            style={{
-              gridColumn: "span 2",
-            }}
-          >
-            <GithubButton href="https://github.com/dcnxx1/kelli" title="Code" />
           </Grid.Item>
         </Grid>
       </InnerContainer>
