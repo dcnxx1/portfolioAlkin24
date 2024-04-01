@@ -17,13 +17,13 @@ export const InViewContainer = ({
   onClick,
 }: Props) => {
   const [isPlaying, setPlaying] = useState(false);
-  
+
   const handleIsPlaying = useCallback(() => {
     setPlaying(!isPlaying);
   }, [isPlaying]);
 
   return (
-    <InView onChange={handleIsPlaying}>
+    <InView style={{ border: "2px solid white" }} onChange={handleIsPlaying}>
       {({ inView, ref, entry }) => (
         <>
           <Styled.Video

@@ -52,6 +52,7 @@ export default function ProjectPage({}: Props) {
         />
 
         <Card
+          linkTo="projects/qrcode"
           onClickLearnMore={() => console.log("yoo...")}
           description="Scan, Deel, Vergemakkelijk: QRCode"
           imgSource={iMacQrCode}
