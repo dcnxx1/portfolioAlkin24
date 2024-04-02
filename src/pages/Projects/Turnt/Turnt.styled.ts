@@ -10,21 +10,14 @@ export const ContentContainer = styled.div`
   place-content: center;
 
   @media ${device.lg} {
-    background: red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: flex-end;
+    /* align-items: center; */
 
-    @media ${device.lg} {
-      display: flex;
-      border: 2px solid white;
-      justify-content: flex-end;
-      align-items: center;
-      align-content: flex-end;
-      height: fit-content;
-    }
     video {
       width: 350px;
+      align-self: center;
     }
   }
 `;

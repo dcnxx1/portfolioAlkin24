@@ -27,6 +27,8 @@ export const InViewContainer = ({
       {({ inView, ref, entry }) => (
         <>
           <Styled.Video
+            preload="auto"
+            playsInline
             onClick={onClick}
             as="video"
             muted={muted}
@@ -47,6 +49,9 @@ export default function Video({ source, style }: Props) {
   return (
     <Styled.Video style={style} src={source}>
       <Styled.Source src={source}></Styled.Source>
+      <source src={source} type="video/mp4"></source>
+      <source src={source} type="video/webm"></source>
+      <source src={source} type="video/mov"></source>
     </Styled.Video>
   );
 }

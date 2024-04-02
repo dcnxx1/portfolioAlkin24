@@ -5,6 +5,7 @@ export const Video = styled.video.attrs({
   loop: true,
   disablePictureInPicture: true,
   disableRemotePlayback: true,
+  
 })`
   object-fit: cover;
 
@@ -19,5 +20,5 @@ export const Video = styled.video.attrs({
 `;
 
 export const Source = styled.source.attrs({
-  type: "sample/mp4",
+  type: "video/mp4",
 })``;
