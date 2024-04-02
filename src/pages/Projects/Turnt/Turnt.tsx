@@ -3,13 +3,18 @@ import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHome
 import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
-import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
+import {
+  ContentContainer,
+  DescriptionText,
+  HeaderText,
+  TextDesktopOnly,
+  TextMobileOnly,
+} from "./Turnt.styled";
 
+import { CSSProperties } from "styled-components";
 import patterns from "../../../assets/background-logo-vector.svg";
 import { InViewContainer } from "../../../components/Video/Video";
-import { CSSProperties } from "styled-components";
 
-import code from "../../../assets/code.png";
 import GithubButton from "../../../components/Button/GithubButton";
 import TagList from "../../../components/Tags/TagList";
 export default function Turnt() {
@@ -27,43 +32,63 @@ export default function Turnt() {
           gap: " 20px",
         }}
       >
-        <Grid.Item>
-          <ContentContainer>
-            <HeaderText>Turnt</HeaderText>
-            <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
-            <DescriptionText>
-              Turnt is een innovatieve muziekapplicatie gebouwd met React Native
-              en NestJS, geïnspireerd door de populaire app TikTok. Wat Turnt
-              uniek maakt, is dat gebruikers moeiteloos nieuwe liedjes en
-              artiesten kunnen ontdekken en met één druk op de knop de beste 30
-              seconden kunnen beluisteren - zorgvuldig geselecteerd door de
-              artiesten zelf.
-            </DescriptionText>
+        <Grid.Row>
+          <Grid.Item>
+            <ContentContainer>
+              <HeaderText>Turnt</HeaderText>
+              <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
+              <DescriptionText>
+                Turnt is een innovatieve muziekapplicatie gebouwd met React
+                Native en NestJS, geïnspireerd door de populaire app TikTok. Wat
+                Turnt uniek maakt, is dat gebruikers moeiteloos nieuwe liedjes
+                en artiesten kunnen ontdekken en met één druk op de knop de
+                beste 30 seconden kunnen beluisteren - zorgvuldig geselecteerd
+                door de artiesten zelf.
+              </DescriptionText>
 
-            <DescriptionText>
-              Maar dat is niet alles! Gebruikers hebben ook de mogelijkheid om
-              het volledige nummer te beluisteren, met slechts een tik op het
-              scherm.
-            </DescriptionText>
+              <DescriptionText>
+                Maar dat is niet alles! Gebruikers hebben ook de mogelijkheid om
+                het volledige nummer te beluisteren, met slechts een tik op het
+                scherm.
+              </DescriptionText>
 
-            <span
-              style={{ background: "white", height: "2px", display: "block" }}
-            ></span>
-
-            <DescriptionText>
-              Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
-              je in staat om moeiteloos door je feed te navigeren. Skip nummers,
-              speel favorieten opnieuw af of spoel vooruit met gemak - allemaal
-              vanaf je Apple-oortjes of Apple Watch.
-            </DescriptionText>
-          </ContentContainer>
-        </Grid.Item>
-        <Grid.Item>
-          <ContentContainer>
-            <InViewContainer source={DemoHomeScreen} />
-          </ContentContainer>
-        </Grid.Item>
-        <Grid.Item>
+              <TextDesktopOnly>
+                <span
+                  style={{
+                    background: "white",
+                    height: "2px",
+                    display: "block",
+                  }}
+                ></span>
+                <br />
+                Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
+                je in staat om moeiteloos door je feed te navigeren. Skip
+                nummers, speel favorieten opnieuw af of spoel vooruit met gemak
+                - allemaal vanaf je Apple-oortjes of Apple Watch.
+              </TextDesktopOnly>
+            </ContentContainer>
+          </Grid.Item>
+          <Grid.Item>
+            <ContentContainer>
+              <InViewContainer source={DemoHomeScreen} />
+              <TextMobileOnly>
+                <span
+                  style={{
+                    background: "white",
+                    height: "2px",
+                    display: "block",
+                  }}
+                ></span>
+                <br />
+                Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
+                je in staat om moeiteloos door je feed te navigeren. Skip
+                nummers, speel favorieten opnieuw af of spoel vooruit met gemak
+                - allemaal vanaf je Apple-oortjes of Apple Watch.
+              </TextMobileOnly>
+            </ContentContainer>
+          </Grid.Item>
+        </Grid.Row>
+        {/* <Grid.Item>
           <ContentContainer>
             <InViewContainer source={DemoAddToPlaylist} />
           </ContentContainer>
@@ -158,17 +183,8 @@ export default function Turnt() {
           <ContentContainer>
             <InViewContainer source={DemoUpload} />
           </ContentContainer>
-        </Grid.Item>
+        </Grid.Item> */}
       </Grid>
     </Container>
   );
 }
-
-const gridStyle: CSSProperties = {
-  width: "100%",
-  justifyContent: "center",
-  alignItems: "center",
-  display: "flex",
-
-  gridColumn: "span 2",
-};

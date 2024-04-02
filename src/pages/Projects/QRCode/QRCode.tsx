@@ -8,6 +8,8 @@ import {
   DescriptionText,
   HeaderText,
 } from "../Turnt/Turnt.styled";
+import TagList from "../../../components/Tags/TagList";
+import GithubButton from "../../../components/Button/GithubButton";
 
 export default function QRCode() {
   return (
@@ -18,46 +20,60 @@ export default function QRCode() {
         },
       }}
     >
-      <Grid style={{ border: "2px solid white" }}>
-        <Grid.Item style={{ border: "2px solid white" }}>
+      <Grid
+        style={{
+          gridTemplateColumns: `repeat(1, 1fr)`,
+          gap: "100px",
+          gridAutoRows: "initial",
+        }}
+      >
+        <Grid.Item style={{ height: "min-content" }}>
           <ContentContainer
-            style={{ border: "2px solid red", alignContent: "flex-start" }}
+            style={{
+              justifyContent: "flex-start",
+              paddingLeft: "2%",
+            }}
           >
             <HeaderText>QRCode</HeaderText>
             <DescriptionText>Zet text om in code!</DescriptionText>
+            <DescriptionText>
+              Ontwikkeld met React en ExpressJS, waarmee je moeiteloos QR-codes
+              van verschillende formaten kunt creëren. Met een gestroomlijnde en
+              intuïtieve interface kunnen gebruikers gemakkelijk door de website
+              navigeren en in slechts enkele stappen hun gewenste QR-code
+              genereren
+            </DescriptionText>
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item style={{ border: "2px solid white" }}>
           <ContentContainer
             style={{
-              border: "2px solid white",
-              background: "red",
               alignContent: "flex-start",
             }}
           >
             <InViewContainer style={{ width: "100%" }} source={QRCodeDemo} />
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item style={{ border: "2px solid white" }}>
           <ContentContainer
             style={{
-              border: "2px solid white",
-              background: "red",
-              alignContent: "flex-start",
+              display: "flex",
+              flexDirection: "row",
+
+              gap: 10,
             }}
           >
-            <InViewContainer style={{ width: "100%" }} source={QRCodeDemo} />
-          </ContentContainer>
-        </Grid.Item>
-        <Grid.Item style={{ border: "2px solid white" }}>
-          <ContentContainer
-            style={{
-              border: "2px solid white",
-              background: "red",
-              alignContent: "flex-start",
-            }}
-          >
-            <InViewContainer style={{ width: "100%" }} source={QRCodeDemo} />
+            <TagList
+              style={{
+                alignContent: "flex-start",
+              }}
+            >
+              <TagList.Tag tagName="React Native" />
+              <TagList.Tag tagName="NodeJS" />
+              <TagList.Tag tagName="QrCodeJS" />
+              <TagList.Tag tagName="ExpressJS" />
+              <TagList.Tag tagName="Cloudinary" />
+            </TagList>
+            <TagList title="Links">
+              <GithubButton href="#" title="Front-End" />
+              <GithubButton href="#" title="Back-End" />
+            </TagList>
           </ContentContainer>
         </Grid.Item>
       </Grid>
