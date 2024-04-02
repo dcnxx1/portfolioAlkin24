@@ -1,18 +1,17 @@
+import backgroundVector from "../../../assets/background-logo-vector.svg";
+import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
+import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/AlktunesHomeDemo.mp4";
+import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
+import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
-import { InnerContainer } from "../../../components/Container/Container.styled";
 import Grid from "../../../components/Grid/Grid";
+import TagList from "../../../components/Tags/TagList";
+import { InViewContainer } from "../../../components/Video/Video";
 import {
   ContentContainer,
   DescriptionText,
   HeaderText,
 } from "../Turnt/Turnt.styled";
-import backgroundVector from "../../../assets/background-logo-vector.svg";
-import { InViewContainer } from "../../../components/Video/Video";
-import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/AlktunesHomeDemo.mp4";
-import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
-import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
-import GithubButton from "../../../components/Button/GithubButton";
-import TagList from "../../../components/Tags/TagList";
 export default function Alktunes() {
   return (
     <Container

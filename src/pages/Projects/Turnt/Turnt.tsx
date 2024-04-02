@@ -1,6 +1,4 @@
-import DemoAddToPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
 import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
-import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
 import {
@@ -11,12 +9,9 @@ import {
   TextMobileOnly,
 } from "./Turnt.styled";
 
-import { CSSProperties } from "styled-components";
 import patterns from "../../../assets/background-logo-vector.svg";
 import { InViewContainer } from "../../../components/Video/Video";
 
-import GithubButton from "../../../components/Button/GithubButton";
-import TagList from "../../../components/Tags/TagList";
 export default function Turnt() {
   return (
     <Container

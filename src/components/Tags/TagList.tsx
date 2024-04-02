@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { TagContainer, TagItem, TagIcon } from "./Tags.styled";
-import { DescriptionText } from "../../pages/Projects/Turnt/Turnt.styled";
 import { CSSProperties } from "styled-components";
+import { DescriptionText } from "../../pages/Projects/Turnt/Turnt.styled";
+import { TagContainer, TagItem } from "./Tags.styled";
 
 interface Tag {
   tagName: string;

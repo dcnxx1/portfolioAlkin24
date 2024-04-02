@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import iPhoneTurnt from "../../../assets/project-assets/turnt/iphone_turnt.svg";
 import { device } from "../../../breakpoints";
-import { InViewContainer } from "../../../components/Video/Video";
 
 export const ContentContainer = styled.div`
   /* height: 100%; */

@@ -1,7 +1,5 @@
-import Container from "../Container/Container";
-import BGLOGO from "../../assets/background-logo-vector.svg";
 import LOGO from "../../assets/logo.png";
-import { InnerContainer } from "../Container/Container.styled";
+import Container from "../Container/Container";
 export default function Foooter() {
   return (
     <Container

@@ -1,22 +1,19 @@
+import "normalize-css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App/App.tsx";
-import "normalize-css";
 import {
   BrowserRouter,
   Route,
-  Router,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
+  Routes
 } from "react-router-dom";
-import Nav from "./nav/Nav.tsx";
-import Turnt from "./pages/Projects/Turnt/Turnt.tsx";
-import Alktunes from "./pages/Projects/Alktunes/Alktunes.tsx";
-import Kelli from "./pages/Projects/Kelli/Kelli";
+import App from "./App/App.tsx";
 import Foooter from "./components/Footer/Footer.tsx";
+import Nav from "./nav/Nav.tsx";
+import Alktunes from "./pages/Projects/Alktunes/Alktunes.tsx";
 import CacaoChat from "./pages/Projects/CacaoChat/CacaoChat.tsx";
+import Kelli from "./pages/Projects/Kelli/Kelli";
 import QRCode from "./pages/Projects/QRCode/QRCode.tsx";
+import Turnt from "./pages/Projects/Turnt/Turnt.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
