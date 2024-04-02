@@ -1,18 +1,18 @@
-import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
-import DemoHomeScreenSupport from "../../../assets/project-assets/turnt/videos/DemoHomeScreen_support.mp4";
-
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
-import {
-  ContentContainer,
-  DescriptionText,
-  HeaderText,
-  TextDesktopOnly,
-  TextMobileOnly,
-} from "./Turnt.styled";
-
 import patterns from "../../../assets/background-logo-vector.svg";
 import { InViewContainer } from "../../../components/Video/Video";
+import {
+  DemoContainer,
+  OverViewContainer,
+  TechincalOverviewContainer,
+} from "../../../components/Grid/Grid.styled";
+import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
+import DemoAddPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
+import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
+import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
+import GithubButton from "../../../components/Button/GithubButton";
+import TagList from "../../../components/Tags/TagList";
 
 export default function Turnt() {
   return (
@@ -24,75 +24,56 @@ export default function Turnt() {
         },
       }}
     >
-      <Grid
-        style={{
-          gap: " 20px",
-        }}
-      >
-        <Grid.Row>
-          <Grid.Item>
-            <ContentContainer>
-              <HeaderText>Turnt</HeaderText>
-              <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
-              <DescriptionText>
-                Turnt is een innovatieve muziekapplicatie gebouwd met React
-                Native en NestJS, geïnspireerd door de populaire app TikTok. Wat
-                Turnt uniek maakt, is dat gebruikers moeiteloos nieuwe liedjes
-                en artiesten kunnen ontdekken en met één druk op de knop de
-                beste 30 seconden kunnen beluisteren - zorgvuldig geselecteerd
-                door de artiesten zelf.
-              </DescriptionText>
+      <Grid>
+        <OverViewContainer>
+          <ContentContainer style={{ display: "grid", placeContent: "center" }}>
+            <HeaderText>Turnt</HeaderText>
+            <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
+            <DescriptionText>
+              Turnt is een innovatieve muziekapplicatie gebouwd met React Native
+              en NestJS, geïnspireerd door de populaire app TikTok. Wat Turnt
+              uniek maakt, is dat gebruikers moeiteloos nieuwe liedjes en
+              artiesten kunnen ontdekken en met één druk op de knop de beste 30
+              seconden kunnen beluisteren - zorgvuldig geselecteerd door de
+              artiesten zelf.
+            </DescriptionText>
 
-              <DescriptionText>
-                Maar dat is niet alles! Gebruikers hebben ook de mogelijkheid om
-                het volledige nummer te beluisteren, met slechts een tik op het
-                scherm.
-              </DescriptionText>
-
-              <TextDesktopOnly>
-                <span
-                  style={{
-                    background: "white",
-                    height: "2px",
-                    display: "block",
-                  }}
-                ></span>
-                <br />
-                Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
-                je in staat om moeiteloos door je feed te navigeren. Skip
-                nummers, speel favorieten opnieuw af of spoel vooruit met gemak
-                - allemaal vanaf je Apple-oortjes of Apple Watch.
-              </TextDesktopOnly>
-            </ContentContainer>
-          </Grid.Item>
-          <Grid.Item>
-            <ContentContainer>
-              <InViewContainer source={DemoHomeScreenSupport} />
-              <TextMobileOnly>
-                <span
-                  style={{
-                    background: "white",
-                    height: "2px",
-                    display: "block",
-                  }}
-                ></span>
-                <br />
-                Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
-                je in staat om moeiteloos door je feed te navigeren. Skip
-                nummers, speel favorieten opnieuw af of spoel vooruit met gemak
-                - allemaal vanaf je Apple-oortjes of Apple Watch.
-              </TextMobileOnly>
-            </ContentContainer>
-          </Grid.Item>
-        </Grid.Row>
-        {/* <Grid.Item>
-          <ContentContainer>
-            <InViewContainer source={DemoAddToPlaylist} />
+            <DescriptionText>
+              Maar dat is niet alles! Gebruikers hebben ook de mogelijkheid om
+              het volledige nummer te beluisteren, met slechts een tik op het
+              scherm.
+            </DescriptionText>
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item>
+        </OverViewContainer>
+        <DemoContainer>
+          <InViewContainer
+            fallbackSource={DemoHomeScreen}
+            source={DemoHomeScreen}
+          />
+        </DemoContainer>
+        <TechincalOverviewContainer>
           <ContentContainer>
-            <h1>Soepel Streamen</h1>
+            <span
+              style={{
+                background: "white",
+                height: "2px",
+                display: "block",
+              }}
+            ></span>
+            <DescriptionText>
+              Naadloos geïntegreerd met het iOS-besturingssysteem, stelt Turnt
+              je in staat om moeiteloos door je feed te navigeren. Skip nummers,
+              speel favorieten opnieuw af of spoel vooruit met gemak - allemaal
+              vanaf je Apple-oortjes of Apple Watch.
+            </DescriptionText>
+          </ContentContainer>
+        </TechincalOverviewContainer>
+      </Grid>
+
+      <Grid reverse>
+        <OverViewContainer>
+          <ContentContainer style={{ display: "grid", placeContent: "center" }}>
+            <HeaderText>Soepel Streamen</HeaderText>
             <h2>
               Stream opgeslagen nummers op en beluister ze met je scherm uit
             </h2>
@@ -103,8 +84,19 @@ export default function Turnt() {
               naar de bijpassende muziekvideo, rechtstreeks vanuit je
               bibliotheek.
             </DescriptionText>
+          </ContentContainer>
+        </OverViewContainer>
+        <DemoContainer>
+          <InViewContainer source={DemoAddPlaylist} />
+        </DemoContainer>
+        <TechincalOverviewContainer>
+          <ContentContainer>
             <span
-              style={{ display: "block", background: "white", height: 2 }}
+              style={{
+                background: "white",
+                height: "2px",
+                display: "block",
+              }}
             ></span>
             <DescriptionText>
               Door AWS MediaConvert worden worden alle bestanden naar m3u8
@@ -118,11 +110,12 @@ export default function Turnt() {
               kunt terugzien.
             </DescriptionText>
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item>
+        </TechincalOverviewContainer>
+      </Grid>
+      <Grid>
+        <OverViewContainer>
           <ContentContainer>
             <HeaderText>Upload je muziekvideo of audio</HeaderText>
-
             <DescriptionText>
               Breng je muziek tot leven door je video- of audiobestand te
               uploaden en selecteer de perfecte 30 seconden die je wilt delen
@@ -133,10 +126,20 @@ export default function Turnt() {
               kiezen die aansluit bij de sfeer en het genre, waardoor je
               gemakkelijker te vinden bent voor je publiek
             </DescriptionText>
-            <span
-              style={{ display: "block", background: "white", height: 2 }}
-            ></span>
+          </ContentContainer>
+        </OverViewContainer>
+        <DemoContainer>
+          <ContentContainer>
+            <InViewContainer source={DemoUpload} />
+          </ContentContainer>
+        </DemoContainer>
+        <TechincalOverviewContainer>
+          <ContentContainer>
             <DescriptionText>
+              <span
+                style={{ display: "block", background: "white", height: 2 }}
+              ></span>
+              <br />
               Dankzij de kracht van FFMpeg wordt automatisch een tijdlijn
               gecreëerd voor elke video, waardoor elke upload een unieke
               ervaring wordt
@@ -175,12 +178,7 @@ export default function Turnt() {
               <GithubButton href="#" title="Front-end" />
             </TagList>
           </ContentContainer>
-        </Grid.Item>
-        <Grid.Item>
-          <ContentContainer>
-            <InViewContainer source={DemoUpload} />
-          </ContentContainer>
-        </Grid.Item> */}
+        </TechincalOverviewContainer>
       </Grid>
     </Container>
   );

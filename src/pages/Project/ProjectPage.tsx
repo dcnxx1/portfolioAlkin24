@@ -1,74 +1,55 @@
 import Card from "../../components/Card/Card";
-import "./style.css";
 
 import LaptopAlktunes from "../../assets/project-assets/alktunes/alktunes_laptop.svg";
 import IphoneTurnt from "../../assets/project-assets/turnt/iphone_turnt.svg";
-import IMacShopee from "../../assets/project-assets/shopee/iMac_shopee.svg";
+
 import iPhoneKelli from "../../assets/project-assets/kelli/iPhone_kelli.svg";
 import iMacQrCode from "../../assets/project-assets/qrCode/iMacQrCode.svg";
 import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.svg";
+import { Grid, Container, InnerContainer } from "./ProjectPage.styled";
 
 interface Props {}
 
 export default function ProjectPage({}: Props) {
   return (
-    <div id="Project">
-      <div className="project__header">
-        <h1>Projecten</h1>
-      </div>
-      <section className={"grid-normal"}>
-        <Card
-          linkTo="projects/turnt"
-          onClickLearnMore={() => {
-            console.log("pressed");
-          }}
-          className="turnt"
-          description="Ontdek muziek in 30 seconden"
-          imgSource={IphoneTurnt}
-          title="Turnt"
-        />
-        <Card
-          className="alktunes"
-          linkTo="projects/alktunes"
-          imgSource={LaptopAlktunes}
-          onClickLearnMore={() => console.log("yoo...")}
-          description="Luister naar je favoriete artiesten"
-          title="Alktunes"
-        />
-        <Card
-          className="shopee"
-          onClickLearnMore={() => console.log("yoo...")}
-          description="Shop je favoriete merken"
-          imgSource={IMacShopee}
-          title="Shopee"
-        />
-        <Card
-          linkTo="projects/kelli"
-          onClickLearnMore={() => console.log("yoo...")}
-          description="Laat je woorden tot leven komen"
-          imgSource={iPhoneKelli}
-          title="Kelli"
-          className="kelli"
-        />
-
-        <Card
-          linkTo="projects/qrcode"
-          onClickLearnMore={() => console.log("yoo...")}
-          description="Scan, Deel, Vergemakkelijk: QRCode"
-          imgSource={iMacQrCode}
-          title="QRCode Generator"
-          className="qrcode"
-        />
-
-        <Card
-          linkTo="projects/cacaochat"
-          onClickLearnMore={() => console.log("yoo...")}
-          description="Chatten over de hele wereld"
-          imgSource={SamsungCacaoChat}
-          title="Cacao Chat"
-          className="cacao-chat"
-        />
-      </section>
-    </div>
+    <Container>
+      <InnerContainer>
+        <Grid >
+          <Card linkTo="projects/turnt" color1="#ea698b" color2="#8b23d1">
+            <Card.Image source={IphoneTurnt} />
+            <Card.Title>Turnt</Card.Title>
+            <Card.Description>
+              Ontdek muziek in slechts 30 seconden
+            </Card.Description>
+          </Card>
+          <Card linkTo="projects/alktunes" color1="#000000" color2="#6c6a6d">
+            <Card.Image source={LaptopAlktunes} />
+            <Card.Title>Alktunes</Card.Title>
+            <Card.Description>
+              Luister naar je favoriete artiesten
+            </Card.Description>
+          </Card>
+          <Card linkTo="projects/kelli" color1="#ffb900" color2="#ee9b0f">
+            <Card.Image source={iPhoneKelli} />
+            <Card.Title>Kelli</Card.Title>
+            <Card.Description>Laat je woorden tot leven komen</Card.Description>
+          </Card>
+          <Card linkTo="projects/qrcode" color1="#d63879" color2="#701d3f">
+            <Card.Image  source={iMacQrCode} />
+            <Card.Title>QRCode</Card.Title>
+            <Card.Description>
+              Scan, Deel, Vergemakkelijk: QRCode
+            </Card.Description>
+          </Card>
+          <Card linkTo="projects/cacaocha" color1="#ffffff" color2="#e4e4e4">
+            <Card.Image source={SamsungCacaoChat} />
+            <Card.Title style={{ color: "black" }}>CacaoChat</Card.Title>
+            <Card.Description style={{ color: "black" }}>
+              Chatten over de hele wereld
+            </Card.Description>
+          </Card>
+        </Grid>
+      </InnerContainer>
+    </Container>
   );
 }

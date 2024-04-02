@@ -1,14 +1,31 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints";
-export const GridContainer = styled.div`
+export const GridContainer = styled.div<{ reverse: boolean }>`
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  display: grid;
 
-  grid-template-columns: repeat(1, minmax(min-content, 1fr));
-  /* grid-auto-rows: 1fr;
-  grid-auto-columns: 1fr; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: minmax(1fr, 50%) minmax(1fr, 50%);
+  grid-template-areas: ${({ reverse }) =>
+    reverse
+      ? `"DemoContainer OverviewContainer"
+        "DemoContainer TechnicalOverviewContainer"
+      `
+      : `"OverviewContainer DemoContainer"
+    "TechnicalOverviewContainer DemoContainer"`};
+
+
+  @media ${device.md} {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas:
+      "OverviewContainer"
+      "DemoContainer"
+      "TechnicalOverviewContainer";
+  }
 `;
 
 export const GridItem = styled.div`
@@ -17,17 +34,23 @@ export const GridItem = styled.div`
   width: 100%;
 
   @media ${device.lg} {
-    min-height: initial;
   }
+`;
+
+export const OverViewContainer = styled.div`
+  grid-area: OverviewContainer;
+`;
+export const DemoContainer = styled.div`
+  grid-area: DemoContainer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const TechincalOverviewContainer = styled.div`
+  grid-area: TechnicalOverviewContainer;
 `;
 
 export const GridRow = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
-  position: relative;
-
-  @media ${device.lg} {
-    flex-direction: column;
-  }
 `;

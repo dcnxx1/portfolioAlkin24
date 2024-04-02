@@ -1,11 +1,12 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as Styled from "./Video.styled";
-
+import { isMobile } from "react-device-detect";
 interface Props {
   source: any;
   style?: React.CSSProperties;
   muted?: boolean;
   onClick?: () => void;
+  fallbackSource?: any;
 }
 
 import { InView } from "react-intersection-observer";
@@ -15,6 +16,7 @@ export const InViewContainer = ({
   style,
   muted = true,
   onClick,
+  fallbackSource,
 }: Props) => {
   const [isPlaying, setPlaying] = useState(false);
 
@@ -28,7 +30,7 @@ export const InViewContainer = ({
         <>
           <Styled.Video
             preload="auto"
-            playsInline={true}
+            playsInline
             onClick={onClick}
             as="video"
             muted={muted}
@@ -38,6 +40,10 @@ export const InViewContainer = ({
             src={source}
           >
             <Styled.Source style={style} src={source}></Styled.Source>
+            <source src={source} type="video/mp4"></source>
+            <source src={source} type="video/webm"></source>
+            <source src={source} type="video/m4v"></source>
+            <source src={source} type="video/mov"></source>
           </Styled.Video>
         </>
       )}

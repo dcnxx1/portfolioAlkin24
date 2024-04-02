@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { device } from "../../../breakpoints";
+import { GridRow } from "../../../components/Grid/Grid.styled";
 
 export const ContentContainer = styled.div`
-  /* height: 100%; */
-  padding-inline: 10px;
-  display: grid;
-  place-content: center;
+  height: 100%;
+  padding-inline: 20px;
 
   @media ${device.lg} {
     display: flex;
@@ -23,6 +22,16 @@ export const ContentContainer = styled.div`
 export const HeaderText = styled.h1`
   color: white;
 `;
+export const GridRowReverseOnMobile = styled(GridRow)`
+  @media ${device.lg} {
+    flex-direction: column-reverse;
+    ${ContentContainer} {
+      ${HeaderText} {
+        text-align: center;
+      }
+    }
+  }
+`;
 
 export const DescriptionText = styled.h3`
   color: white;
@@ -39,6 +48,21 @@ export const TextMobileOnly = styled(DescriptionText)`
   display: none;
   @media ${device.lg} {
     display: block;
+  }
+`;
+
+export const ViewMobileOnly = styled.div`
+  display: none;
+  @media ${device.lg} {
+    display: block;
+    width: 100%;
+  }
+`;
+
+export const ViewDesktopOnly = styled.div`
+  display: block;
+  @media ${device.lg} {
+    display: none;
   }
 `;
 
