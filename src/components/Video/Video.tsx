@@ -23,12 +23,12 @@ export const InViewContainer = ({
   }, [isPlaying]);
 
   return (
-    <InView style={{ }} onChange={handleIsPlaying}>
+    <InView style={{}} onChange={handleIsPlaying}>
       {({ inView, ref }) => (
         <>
           <Styled.Video
             preload="auto"
-            playsInline
+            playsInline={true}
             onClick={onClick}
             as="video"
             muted={muted}

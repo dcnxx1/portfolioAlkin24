@@ -1,4 +1,6 @@
 import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
+import DemoHomeScreenSupport from "../../../assets/project-assets/turnt/videos/DemoHomeScreen_support.mp4";
+
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
 import {
@@ -65,7 +67,7 @@ export default function Turnt() {
           </Grid.Item>
           <Grid.Item>
             <ContentContainer>
-              <InViewContainer source={DemoHomeScreen} />
+              <InViewContainer source={DemoHomeScreenSupport} />
               <TextMobileOnly>
                 <span
                   style={{
