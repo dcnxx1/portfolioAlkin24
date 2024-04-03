@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
 import { CSSProperties } from "styled-components";
 import {
   DescriptionText,
   HeaderText,
 } from "../../pages/Projects/Turnt/Turnt.styled";
 import { Container, Image } from "./Card.styled";
+import { ReactNode } from "react";
 
 interface Props {
   color1: string;
@@ -24,6 +24,7 @@ export default function Card({
   return (
     <Container style={style} color1={color1} color2={color2}>
       {children}
+      <a href={linkTo} />
     </Container>
   );
 }

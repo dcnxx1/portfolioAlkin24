@@ -15,7 +15,6 @@ export const InViewContainer = ({
   style,
   muted = true,
   onClick,
-  fallbackSource,
 }: Props) => {
   const [isPlaying, setPlaying] = useState(false);
 
