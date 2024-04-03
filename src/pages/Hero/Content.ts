@@ -15,8 +15,6 @@ export const Content = styled.div`
     width: 50%;
   }
   @media ${device.md} {
-    ${Image} {
-    }
     ${DescriptionText} {
       width: 90%;
     }

@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import * as Styled from "./Video.styled";
-import { isMobile } from "react-device-detect";
 interface Props {
   source: any;
   style?: React.CSSProperties;

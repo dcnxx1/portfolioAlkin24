@@ -1,11 +1,10 @@
+import { ReactNode } from "react";
 import { CSSProperties } from "styled-components";
 import {
   DescriptionText,
   HeaderText,
 } from "../../pages/Projects/Turnt/Turnt.styled";
 import { Container, Image } from "./Card.styled";
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 
 interface Props {
   color1: string;

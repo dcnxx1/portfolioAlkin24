@@ -1,23 +1,22 @@
-import Container from "../../../components/Container/Container";
-import { InnerContainer } from "../../../components/Container/Container.styled";
-import Grid from "../../../components/Grid/Grid";
-import {
-  ContentContainer,
-  DescriptionText,
-  HeaderText,
-} from "../Turnt/Turnt.styled";
-import backgroundVector from "../../../assets/background-logo-vector.svg";
-import { InViewContainer } from "../../../components/Video/Video";
-import DemoKevin from "../../../assets/project-assets/kelli/demo/DemoKevin.mp4";
-import DemoCharacters from "../../../assets/project-assets/kelli/demo/DemoCharacters.mp4";
 import { useCallback, useState } from "react";
+import backgroundVector from "../../../assets/background-logo-vector.svg";
+import DemoCharacters from "../../../assets/project-assets/kelli/demo/DemoCharacters.mp4";
+import DemoKevin from "../../../assets/project-assets/kelli/demo/DemoKevin.mp4";
 import GithubButton from "../../../components/Button/GithubButton";
-import TagList from "../../../components/Tags/TagList";
+import Container from "../../../components/Container/Container";
+import Grid from "../../../components/Grid/Grid";
 import {
   DemoContainer,
   OverViewContainer,
   TechincalOverviewContainer,
 } from "../../../components/Grid/Grid.styled";
+import TagList from "../../../components/Tags/TagList";
+import { InViewContainer } from "../../../components/Video/Video";
+import {
+  ContentContainer,
+  DescriptionText,
+  HeaderText,
+} from "../Turnt/Turnt.styled";
 export default function Kelli() {
   const [isMuted, setIsMuted] = useState(true);
 

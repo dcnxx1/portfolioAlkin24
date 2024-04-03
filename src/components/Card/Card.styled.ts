@@ -1,10 +1,9 @@
 import { styled } from "styled-components";
-import {
-  HeaderText,
-  DescriptionText,
-} from "../../pages/Projects/Turnt/Turnt.styled";
 import { device } from "../../breakpoints";
-import { Link } from "react-router-dom";
+import {
+  DescriptionText,
+  HeaderText,
+} from "../../pages/Projects/Turnt/Turnt.styled";
 interface ContainerProps {
   color1: string;
   color2: string;
