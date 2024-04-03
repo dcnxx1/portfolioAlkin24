@@ -7,14 +7,14 @@ import iPhoneKelli from "../../assets/project-assets/kelli/iPhone_kelli.svg";
 import iMacQrCode from "../../assets/project-assets/qrCode/iMacQrCode.svg";
 import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.svg";
 import { Grid, Container, InnerContainer } from "./ProjectPage.styled";
+import { HeaderText } from "../Projects/Turnt/Turnt.styled";
 
-interface Props {}
-
-export default function ProjectPage({}: Props) {
+export default function ProjectPage() {
   return (
-    <Container>
+    <Container style={{ paddingBlock: "10px" }}>
       <InnerContainer>
-        <Grid >
+        <HeaderText>Projecten</HeaderText>
+        <Grid style={{ padding: 10 }}>
           <Card linkTo="projects/turnt" color1="#ea698b" color2="#8b23d1">
             <Card.Image source={IphoneTurnt} />
             <Card.Title>Turnt</Card.Title>
@@ -35,7 +35,7 @@ export default function ProjectPage({}: Props) {
             <Card.Description>Laat je woorden tot leven komen</Card.Description>
           </Card>
           <Card linkTo="projects/qrcode" color1="#d63879" color2="#701d3f">
-            <Card.Image  source={iMacQrCode} />
+            <Card.Image source={iMacQrCode} />
             <Card.Title>QRCode</Card.Title>
             <Card.Description>
               Scan, Deel, Vergemakkelijk: QRCode

@@ -12,20 +12,20 @@ interface Props {
   color2: string;
   children: ReactNode;
   linkTo: string;
+  style?: CSSProperties;
 }
 
-export default function Card({ color1, color2, children, linkTo }: Props) {
+export default function Card({
+  color1,
+  color2,
+  children,
+  linkTo,
+  style,
+}: Props) {
   return (
-    <Link
-      style={{
-        textDecoration: "none",
-      }}
-      to={linkTo}
-    >
-      <Container color1={color1} color2={color2}>
-        {children}
-      </Container>
-    </Link>
+    <Container style={style} color1={color1} color2={color2}>
+      {children}
+    </Container>
   );
 }
 

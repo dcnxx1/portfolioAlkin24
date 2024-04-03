@@ -27,7 +27,7 @@ export default function Turnt() {
       <Grid>
         <OverViewContainer>
           <ContentContainer style={{ display: "grid", placeContent: "center" }}>
-            <HeaderText>Turnt</HeaderText>
+            <HeaderText>Turnt - in 30 seconden Jouw nieuwe nummer!</HeaderText>
             <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
             <DescriptionText>
               Turnt is een innovatieve muziekapplicatie gebouwd met React Native

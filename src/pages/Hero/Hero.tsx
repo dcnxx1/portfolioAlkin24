@@ -1,36 +1,28 @@
-import "./style.css";
+
+import { Container, InnerContainer, Content, Image } from "./Hero.styled";
+
 import me from "../../assets/me.jpg";
-import awslogo from "../../assets/image 1.svg";
-import reactlogo from "../../assets/image 2.svg";
-import nodejsLogo from "../../assets/image 3.svg";
-import githubLogo from "../../assets/image 4.svg";
-import reactQueryLogo from "../../assets/image 5.svg";
+
+import { DescriptionText, HeaderText } from "../Projects/Turnt/Turnt.styled";
 
 export default function Hero() {
   return (
-    <div id="Hero">
-      <section> 
-        <div className="container-name">
-          <h1>Alkin Sali</h1>
-          <h2>Full-Stack Developer</h2>
-          <img className="img-me" src={me} />
-          <div className="container-description">
-            <p>
-              Ervaren zelf geleerde Full-stack Developer met meer dan twee jaar
-              ervaring in het ontwikkelen van schaalbare applicaties
-            </p>
-          </div>
-        </div>
-        <div className="container-techstack">
-          <div className="techstack-images">
-            <img src={awslogo} />
-            <img src={reactlogo} />
-            <img src={nodejsLogo} />
-            <img src={githubLogo} />
-            <img src={reactQueryLogo} />
-          </div>
-        </div>
-      </section>
-    </div>
+    <Container>
+      <InnerContainer>
+        <Content>
+          <HeaderText>Alkin Sali</HeaderText>
+          <HeaderText>Full Stack Ontwikkelaar</HeaderText>
+          <Image style={{ borderRadius: "50%"}} src={me} />
+          <DescriptionText style={{ fontSize: 22 }}>
+            Zelf geleerde Full-stack Developer met meer dan twee jaar ervaring
+            in het ontwikkelen van schaalbare applicaties
+          </DescriptionText>
+          <DescriptionText style={{ fontSize: 22, fontWeight: "normal" }}>
+            Bekwaam met diverse technologieen zoals React, React Native, NodeJS,
+            AWS, Cloud Computing, Front-end en Back-end ontwikkeling.
+          </DescriptionText>
+        </Content>
+      </InnerContainer>
+    </Container>
   );
 }

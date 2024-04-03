@@ -1,49 +1,39 @@
 import "./style.css";
 import me from "../../assets/me.jpg";
-
-import youtube from "../../assets/youtube.svg";
-import instagram from "../../assets/instagram.svg";
-import snapchat from "../../assets/facebook.svg";
-import meta from "../../assets/meta.png";
-import group from "../../assets/group (1).png";
+import socialMedias from "../../assets/social_medias.svg";
 import { DescriptionText, HeaderText } from "../Projects/Turnt/Turnt.styled";
+import {
+  Container,
+  Content,
+  ContentContainer,
+  InnerContainer,
+  Image,
+} from "./About.styled";
+
 export default function About(): JSX.Element {
   return (
-    <div id="About">
-      <section>
-        <div className="about-section">
-          <div className="about-container">
+    <Container>
+      <InnerContainer>
+        <ContentContainer>
+          <Content>
             <HeaderText>Over mij</HeaderText>
             <DescriptionText>
-              Ik ben een zelfgeleerde full-stack ontwikkelaar met meer dan 2
+              Ik ben een zelfgeleerde full-stack ontwikkelaar met meer dan twee
               jaar ervaring in het ontwerpen en bouwen van applicaties. <br />
               <br /> Mijn focus ligt voornamelijk op het creëren van schaalbare
               en goedwerkende oplossingen voor zowel de front-end als de
               back-end van projecten.
-              <br />
-              <br />
-              Wat mij drijft, is de mogelijkheid om applicaties te ontwikkelen
-              die een groot aantal mensen kunnen bereiken en positief
-              beïnvloeden.
             </DescriptionText>
-          </div>
-          <div className="about-me-img">
-            <img src={me} />
-          </div>
-        </div>
-        <div className="motivation-section">
-          <div className="motivation-socialmedia-images">
-            <div className="social-media-img">
-              <img className="youtube-logo" src={youtube} />
-              <img className="snapchat-logo" src={snapchat} />
-            </div>
-            <img src={group} className="users-group-img" />
-            <div className="meta-img">
-              <img className="meta-logo" src={meta} />
-              <img className="instagram-logo" src={instagram} />
-            </div>
-          </div>
-          <div className="motivation-container">
+          </Content>
+          <Content style={{ display: "grid", placeItems: "center" }}>
+            <Image style={{ borderRadius: "50%" }} src={me} />
+          </Content>
+        </ContentContainer>
+        <ContentContainer>
+          <Content style={{ display: "grid", placeItems: "center" }}>
+            <Image src={socialMedias} />
+          </Content>
+          <Content>
             <HeaderText>Motivatie</HeaderText>
             <DescriptionText>
               Ik haal veel inspiratie uit bedrijven zoals Snapchat, Instagram,
@@ -54,9 +44,9 @@ export default function About(): JSX.Element {
               ontwikkelen die een vergelijkbare impact heeft en het leven van
               veel mensen verbetert.
             </DescriptionText>
-          </div>
-        </div>
-      </section>
-    </div>
+          </Content>
+        </ContentContainer>
+      </InnerContainer>
+    </Container>
   );
 }

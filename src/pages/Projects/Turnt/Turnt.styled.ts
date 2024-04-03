@@ -36,6 +36,7 @@ export const GridRowReverseOnMobile = styled(GridRow)`
 export const DescriptionText = styled.h3`
   color: white;
   font-weight: normal;
+  text-align: justify;
 `;
 
 export const PhoneImage = styled.img`
