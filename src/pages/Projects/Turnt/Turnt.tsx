@@ -10,7 +10,7 @@ import {
 import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
 import DemoAddPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
 import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
-import { ContentContainer, DescriptionText, HeaderText } from "./Turnt.styled";
+import { ContentContainer, DescriptionText, HeaderText, SubHeaderText } from "./Turnt.styled";
 import GithubButton from "../../../components/Button/GithubButton";
 import TagList from "../../../components/Tags/TagList";
 
@@ -28,7 +28,8 @@ export default function Turnt() {
         <OverViewContainer>
           <ContentContainer style={{ display: "grid", placeContent: "center" }}>
             <HeaderText>Turnt - in 30 seconden Jouw nieuwe nummer!</HeaderText>
-            <h2>Ontdek muziek op een geheel nieuwe manier met Turnt</h2>
+            <SubHeaderText style={{marginBlock: 10}}>Ontdek muziek op een geheel nieuwe manier met Turnt</SubHeaderText>
+
             <DescriptionText>
               Turnt is een innovatieve muziekapplicatie gebouwd met React Native
               en NestJS, geïnspireerd door de populaire app TikTok. Wat Turnt
