@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints";
+
 export const GridContainer = styled.div<{ reverse: boolean }>`
   width: 100%;
   height: 100%;

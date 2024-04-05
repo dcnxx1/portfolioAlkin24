@@ -16,7 +16,7 @@ interface Props {
 export default function TagList({ children, title = "Tags", style }: Props) {
   return (
     <TagContainer style={style}>
-      <DescriptionText>{title}</DescriptionText>
+      <DescriptionText style={{paddingBottom: 10}}>{title}</DescriptionText>
       <div
         style={{
           display: "flex",

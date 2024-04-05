@@ -3,7 +3,7 @@ import {
   DescriptionText,
   HeaderText,
 } from "../../pages/Projects/Turnt/Turnt.styled";
-import { Container, Image } from "./Card.styled";
+import { Container, Image, LinkToProjectPage } from "./Card.styled";
 import { ReactNode } from "react";
 
 interface Props {
@@ -23,8 +23,7 @@ export default function Card({
 }: Props) {
   return (
     <Container style={style} color1={color1} color2={color2}>
-      {children}
-      <a href={linkTo} />
+      <LinkToProjectPage to={linkTo}>{children}</LinkToProjectPage>
     </Container>
   );
 }

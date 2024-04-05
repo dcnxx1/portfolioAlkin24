@@ -4,6 +4,7 @@ import {
   DescriptionText,
   HeaderText,
 } from "../../pages/Projects/Turnt/Turnt.styled";
+import { Link } from "react-router-dom";
 interface ContainerProps {
   color1: string;
   color2: string;
@@ -15,6 +16,8 @@ export const Image = styled.img`
 
   background-size: cover;
 `;
+
+export const LinkToProjectPage = styled(Link)``;
 
 export const Container = styled.div<ContainerProps>`
   aspect-ratio: 1 /1;
