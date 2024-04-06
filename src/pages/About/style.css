@@ -82,7 +82,6 @@ section .motivation-section {
   display: flex;
   gap: 50px;
   position: absolute;
-  /* border: 2px solid black; */
 
   transform: rotate(0deg);
   animation-delay: 0;

@@ -38,18 +38,17 @@ export const GridItem = styled.div`
 
 export const OverViewContainer = styled.div`
   grid-area: OverviewContainer;
-  border: 2px solid orange;
+
 `;
 export const DemoContainer = styled.div`
   grid-area: DemoContainer;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+
 `;
 export const TechincalOverviewContainer = styled.div`
   grid-area: TechnicalOverviewContainer;
-  border: 2px solid white;
 `;
 
 export const GridRow = styled.div`

@@ -4,18 +4,17 @@ import DemoCharacters from "../../../assets/project-assets/kelli/demo/DemoCharac
 import DemoKevin from "../../../assets/project-assets/kelli/demo/DemoKevin.mp4";
 import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
-import Grid from "../../../components/Grid/Grid";
-import {
-  DemoContainer,
-  OverViewContainer,
-  TechincalOverviewContainer,
-} from "../../../components/Grid/Grid.styled";
 import TagList from "../../../components/Tags/TagList";
 import { InViewContainer } from "../../../components/Video/Video";
 import {
   ContentContainer,
   DescriptionText,
   HeaderText,
+  InfoContainer,
+  MobileGrid,
+  PhoneContainer,
+  SubHeaderText,
+  TechContainer,
 } from "../Turnt/Turnt.styled";
 export default function Kelli() {
   const [isMuted, setIsMuted] = useState(true);
@@ -34,14 +33,14 @@ export default function Kelli() {
         },
       }}
     >
-      <Grid>
-        <OverViewContainer>
+      <MobileGrid>
+        <InfoContainer>
           <ContentContainer>
             <HeaderText>Kelli</HeaderText>
-            <h2>
+            <SubHeaderText>
               Laat je woorden tot leven komen met deze simpele Text To Speech
               App!
-            </h2>
+            </SubHeaderText>
             <DescriptionText>
               Kelli biedt een meeslepende en gepersonaliseerde ervaring met haar
               uitgebreide selectie van stemkarakters en nationaliteiten. Of je
@@ -50,36 +49,29 @@ export default function Kelli() {
               allemaal!
             </DescriptionText>
           </ContentContainer>
-        </OverViewContainer>
-
-        <DemoContainer>
+        </InfoContainer>
+        <PhoneContainer>
+          <InViewContainer
+            onClick={toggleIsMuted}
+            muted={isMuted}
+            style={{
+              borderRadius: "80px",
+            }}
+            source={DemoKevin}
+          />
+        </PhoneContainer>
+        <TechContainer>
           <ContentContainer>
-            <InViewContainer
-              onClick={toggleIsMuted}
-              muted={isMuted}
-              style={{
-                borderRadius: "80px",
-              }}
-              source={DemoKevin}
-            />
-          </ContentContainer>
-        </DemoContainer>
-        <TechincalOverviewContainer>
-          <ContentContainer>
-            <span
-              style={{ display: "block", height: 2, background: "white" }}
-            ></span>
             <DescriptionText>
               Gebouwd met React Native en Expo, Kelli maakt ook gebruik van een
               NestJS backend. Met een API kunnen de client en de server met
               elkaar communiceren.
             </DescriptionText>
           </ContentContainer>
-        </TechincalOverviewContainer>
-      </Grid>
-
-      <Grid reverse>
-        <OverViewContainer>
+        </TechContainer>
+      </MobileGrid>
+      <MobileGrid reverse>
+        <InfoContainer>
           <ContentContainer>
             <HeaderText>Kies uit verschillende stemmen</HeaderText>
             <DescriptionText>
@@ -90,30 +82,25 @@ export default function Kelli() {
               brengen.
             </DescriptionText>
           </ContentContainer>
-        </OverViewContainer>
-
-        <DemoContainer>
-          <ContentContainer>
-            <InViewContainer
-              style={{
-                borderRadius: "80px",
-              }}
-              source={DemoCharacters}
-            />
-          </ContentContainer>
-        </DemoContainer>
-
-        <TechincalOverviewContainer>
-          <ContentContainer>
-            <span
-              style={{ display: "block", height: 2, background: "white" }}
-            ></span>
+        </InfoContainer>
+        <PhoneContainer>
+          <InViewContainer
+            style={{
+              borderRadius: "80px",
+            }}
+            source={DemoCharacters}
+          />
+        </PhoneContainer>
+        <TechContainer>
+          <ContentContainer style={{ paddingBottom: 20 }}>
             <DescriptionText>
               Kelli maakt gebruik van AWS Polly voor het genereren van stemmen.
               AWS Polly is een krachtige tekst-naar-spraakdienst die natuurlijk
               klinkende stemmen biedt in verschillende talen en accenten.
             </DescriptionText>
-            <TagList>
+          </ContentContainer>
+          <ContentContainer>
+            <TagList style={{paddingBottom: 20}}>
               <TagList.Tag tagName="Expo" />
               <TagList.Tag tagName="React Native" />
               <TagList.Tag tagName="NestJS" />
@@ -131,8 +118,8 @@ export default function Kelli() {
               <GithubButton href="" title="Code" />
             </TagList>
           </ContentContainer>
-        </TechincalOverviewContainer>
-      </Grid>
+        </TechContainer>
+      </MobileGrid>
     </Container>
   );
 }
