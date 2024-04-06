@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { device } from "../../../breakpoints";
-import { GridRow } from "../../../components/Grid/Grid.styled";
 
 export const ContentContainer = styled.div`
   height: 100%;
@@ -21,27 +20,15 @@ export const ContentContainer = styled.div`
 export const HeaderText = styled.h1`
   color: white;
 `;
-export const GridRowReverseOnMobile = styled(GridRow)`
-  @media ${device.lg} {
-    flex-direction: column-reverse;
-    ${ContentContainer} {
-      ${HeaderText} {
-        text-align: center;
-      }
-    }
-  }
-`;
 
 export const DescriptionText = styled.p`
   color: white;
   font-weight: normal;
-
   font-size: 18px;
 `;
 
 export const SubHeaderText = styled.h2`
   color: white;
-  
   font-size: 22px;
 `;
 
@@ -51,9 +38,75 @@ export const PhoneImage = styled.img`
   align-self: center;
 `;
 
-export const TextDesktopOnly = styled(DescriptionText)`
-  display: block;
-  @media ${device.lg} {
-    display: none;
+export const MobileGrid = styled.div<{ reverse?: boolean }>`
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 30% 70%;
+
+  grid-template-areas: ${({ reverse }) =>
+    reverse
+      ? `"PhoneContainer InfoContainer"
+    "PhoneContainer TechContainer"
+  `
+      : `
+  "InfoContainer PhoneContainer"
+  "TechContainer PhoneContainer"
+  `};
+
+  @media ${device.md} {
+    gap: 20px;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+      "InfoContainer"
+      "PhoneContainer"
+      "TechContainer";
+  }
+  margin-block: 20px;
+  ${HeaderText} {
+    text-align: center;
+  }
+  ${SubHeaderText} {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  ${ContentContainer} {
+    place-content: center;
+  }
+`;
+
+export const InfoContainer = styled.div`
+  grid-area: InfoContainer;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  @media ${device.md} {
+    place-items: center;
+    place-content: center;
+  }
+`;
+export const PhoneContainer = styled.div`
+  grid-area: PhoneContainer;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  @media ${device.md} {
+    place-items: center;
+  }
+`;
+
+export const TechContainer = styled.div`
+  grid-area: TechContainer;
+  width: 100%;
+  display: grid;
+  height: 100%;
+  @media ${device.md} {
+    place-items: center;
+    place-content: center;
   }
 `;

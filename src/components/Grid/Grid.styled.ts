@@ -6,10 +6,9 @@ export const GridContainer = styled.div<{ reverse: boolean }>`
   height: 100%;
   min-height: 100vh;
 
-
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: minmax(1fr, 50%) minmax(1fr, 50%);
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: ${({ reverse }) =>
     reverse
       ? `"DemoContainer OverviewContainer"
@@ -17,7 +16,6 @@ export const GridContainer = styled.div<{ reverse: boolean }>`
       `
       : `"OverviewContainer DemoContainer"
     "TechnicalOverviewContainer DemoContainer"`};
-
 
   @media ${device.md} {
     grid-template-columns: 1fr;
@@ -40,15 +38,18 @@ export const GridItem = styled.div`
 
 export const OverViewContainer = styled.div`
   grid-area: OverviewContainer;
+  border: 2px solid orange;
 `;
 export const DemoContainer = styled.div`
   grid-area: DemoContainer;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid black;
 `;
 export const TechincalOverviewContainer = styled.div`
   grid-area: TechnicalOverviewContainer;
+  border: 2px solid white;
 `;
 
 export const GridRow = styled.div`
