@@ -7,6 +7,7 @@ import {
 } from "../Turnt/Turnt.styled";
 import LogoBackgroundVector from "../../../assets/background-logo-vector.svg";
 import CacaoChatDemo from "../../../assets/project-assets/cacaochat/videos/CacaoChatShowcase.mp4";
+import FallbackCacaoChatDemo from "../../../assets/project-assets/cacaochat/videos/fallback/CacaoChatShowcase.mp4";
 import { InViewContainer } from "../../../components/Video/Video";
 import TagList from "../../../components/Tags/TagList";
 import GithubButton from "../../../components/Button/GithubButton";
@@ -64,7 +65,11 @@ export default function CacaoChat() {
 
         <DemoContainer>
           <ContentContainer>
-            <InViewContainer style={{ width: "100%" }} source={CacaoChatDemo} />
+            <InViewContainer
+              fallbackSource={FallbackCacaoChatDemo}
+              style={{ width: "100%" }}
+              source={CacaoChatDemo}
+            />
           </ContentContainer>
         </DemoContainer>
       </Grid>

@@ -1,27 +1,24 @@
-import Container from "../../../components/Container/Container";
-import Grid from "../../../components/Grid/Grid";
 import patterns from "../../../assets/background-logo-vector.svg";
-import { InViewContainer } from "../../../components/Video/Video";
-import {
-  DemoContainer,
-  OverViewContainer,
-  TechincalOverviewContainer,
-} from "../../../components/Grid/Grid.styled";
-import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
 import DemoAddPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
+import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
 import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
+import FallbackDemoAddPlaylist from "../../../assets/project-assets/turnt/videos/fallback/DemoAddPlaylist.mp4";
+import FallbackDemoHomeScreen from "../../../assets/project-assets/turnt/videos/fallback/DemoHomeScreen.mp4";
+import FallbackDemoUpload from "../../../assets/project-assets/turnt/videos/fallback/DemoUpload.mp4";
+import GithubButton from "../../../components/Button/GithubButton";
+import Container from "../../../components/Container/Container";
+import TagList from "../../../components/Tags/TagList";
+import { InViewContainer } from "../../../components/Video/Video";
 import {
   ContentContainer,
   DescriptionText,
   HeaderText,
-  SubHeaderText,
   InfoContainer,
-  PhoneContainer,
-  TechContainer,
   MobileGrid,
+  PhoneContainer,
+  SubHeaderText,
+  TechContainer,
 } from "./Turnt.styled";
-import GithubButton from "../../../components/Button/GithubButton";
-import TagList from "../../../components/Tags/TagList";
 
 export default function Turnt() {
   return (
@@ -92,7 +89,10 @@ export default function Turnt() {
           </ContentContainer>
         </InfoContainer>
         <PhoneContainer>
-          <InViewContainer source={DemoAddPlaylist} />
+          <InViewContainer
+            fallbackSource={FallbackDemoAddPlaylist}
+            source={DemoAddPlaylist}
+          />
         </PhoneContainer>
         <TechContainer>
           <ContentContainer>
@@ -127,7 +127,10 @@ export default function Turnt() {
           </ContentContainer>
         </InfoContainer>
         <PhoneContainer>
-          <InViewContainer source={DemoUpload} />
+          <InViewContainer
+            fallbackSource={FallbackDemoUpload}
+            source={DemoUpload}
+          />
         </PhoneContainer>
         <TechContainer>
           <ContentContainer style={{ paddingBottom: 10 }}>
@@ -147,7 +150,7 @@ export default function Turnt() {
               de React Native-app deze kan ophalen met CloudFront CDN
             </DescriptionText>
           </ContentContainer>
-          <ContentContainer style={{ }}>
+          <ContentContainer>
             <TagList style={{ paddingBottom: 10 }}>
               <TagList.Tag tagName="Bare React Native" />
               <TagList.Tag tagName="Prisma" />
@@ -175,77 +178,6 @@ export default function Turnt() {
           </ContentContainer>
         </TechContainer>
       </MobileGrid>
-      {/* <Grid>
-        
-      
-      <Grid>
-        <OverViewContainer>
-          <ContentContainer>
-            <HeaderText>Upload je muziekvideo of audio</HeaderText>
-            <DescriptionText>
-              Breng je muziek tot leven door je video- of audiobestand te
-              uploaden en selecteer de perfecte 30 seconden die je wilt delen
-              met gebruikers.
-            </DescriptionText>
-            <DescriptionText>
-              Personaliseer je nummer verder door een passende coverfoto te
-              kiezen die aansluit bij de sfeer en het genre, waardoor je
-              gemakkelijker te vinden bent voor je publiek
-            </DescriptionText>
-          </ContentContainer>
-        </OverViewContainer>
-        <DemoContainer>
-          <ContentContainer>
-            <InViewContainer source={DemoUpload} />
-          </ContentContainer>
-        </DemoContainer>
-        <TechincalOverviewContainer>
-          <ContentContainer>
-            <DescriptionText>
-              <span
-                style={{ display: "block", background: "white", height: 2 }}
-              ></span>
-              <br />
-              Dankzij de kracht van FFMpeg wordt automatisch een tijdlijn
-              gecreëerd voor elke video, waardoor elke upload een unieke
-              ervaring wordt
-            </DescriptionText>
-            <DescriptionText>
-              De geselecteerde tijd die de artiest kiest wordt als metadata aan
-              de video toegevoegd. Vervolgens wordt de video verzonden naar de
-              S3-bucket, die een Lambda-functie activeert met de metadata. De
-              Lambda-functie start AWS MediaConvert op met de metadata, zodat de
-              30 seconden clip in m3u8-formaat wordt gecreëerd. Nadat dit proces
-              is voltooid, wordt de video teruggeplaatst in de S3-bucket, zodat
-              de React Native-app deze kan ophalen met CloudFront CDN
-            </DescriptionText>
-            <TagList>
-              <TagList.Tag tagName="Bare React Native" />
-              <TagList.Tag tagName="Prisma" />
-              <TagList.Tag tagName="MySQL" />
-              <TagList.Tag tagName="Docker" />
-              <TagList.Tag tagName="Javascript" />
-              <TagList.Tag tagName="AWS" />
-              <TagList.Tag tagName="FFmpeg" />
-              <TagList.Tag tagName="React Query" />
-              <TagList.Tag tagName="S3" />
-              <TagList.Tag tagName="Lambda" />
-              <TagList.Tag tagName="AWS MediaConvert" />
-              <TagList.Tag tagName="CloudFront" />
-              <TagList.Tag tagName="Typescript" />
-              <TagList.Tag tagName="Github" />
-              <TagList.Tag tagName="Photoshop" />
-              <TagList.Tag tagName="Adobe Premiere Pro" />
-              <TagList.Tag tagName="Figma" />
-              <TagList.Tag tagName="Excalidraw" />
-            </TagList>
-            <TagList title="Links">
-              <GithubButton href="#" title="Back-end" />
-              <GithubButton href="#" title="Front-end" />
-            </TagList>
-          </ContentContainer>
-        </TechincalOverviewContainer>
-      </Grid> */}
     </Container>
   );
 }

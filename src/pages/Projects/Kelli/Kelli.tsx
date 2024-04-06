@@ -1,7 +1,12 @@
 import { useCallback, useState } from "react";
 import backgroundVector from "../../../assets/background-logo-vector.svg";
+
 import DemoCharacters from "../../../assets/project-assets/kelli/demo/DemoCharacters.mp4";
 import DemoKevin from "../../../assets/project-assets/kelli/demo/DemoKevin.mp4";
+
+import FallbackDemoCharacters from "../../../assets/project-assets/kelli/demo/fallback/DemoCharacters.mp4";
+import FallbackDemoKevin from "../../../assets/project-assets/kelli/demo/fallback/DemoKevin.mp4";
+
 import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
 import TagList from "../../../components/Tags/TagList";
@@ -52,6 +57,7 @@ export default function Kelli() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
+            fallbackSource={FallbackDemoKevin}
             onClick={toggleIsMuted}
             muted={isMuted}
             style={{
@@ -85,6 +91,7 @@ export default function Kelli() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
+            fallbackSource={FallbackDemoCharacters}
             style={{
               borderRadius: "80px",
             }}
@@ -100,7 +107,7 @@ export default function Kelli() {
             </DescriptionText>
           </ContentContainer>
           <ContentContainer>
-            <TagList style={{paddingBottom: 20}}>
+            <TagList style={{ paddingBottom: 20 }}>
               <TagList.Tag tagName="Expo" />
               <TagList.Tag tagName="React Native" />
               <TagList.Tag tagName="NestJS" />

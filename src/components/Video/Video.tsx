@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import * as Styled from "./Video.styled";
+import { isMobile } from "react-device-detect";
 interface Props {
   source: any;
   style?: React.CSSProperties;
@@ -15,6 +16,7 @@ export const InViewContainer = ({
   style,
   muted = true,
   onClick,
+  fallbackSource,
 }: Props) => {
   const [isPlaying, setPlaying] = useState(false);
 
@@ -35,13 +37,28 @@ export const InViewContainer = ({
             ref={ref}
             autoPlay={inView ?? true}
             style={style}
-            src={source}
+            src={isMobile ? fallbackSource : source}
           >
-            <Styled.Source style={style} src={source}></Styled.Source>
-            <source src={source} type="video/mp4"></source>
-            <source src={source} type="video/webm"></source>
-            <source src={source} type="video/m4v"></source>
-            <source src={source} type="video/mov"></source>
+            <Styled.Source
+              style={style}
+              src={isMobile ? fallbackSource : source}
+            ></Styled.Source>
+            <source
+              src={isMobile ? fallbackSource : source}
+              type="video/mp4"
+            ></source>
+            <source
+              src={isMobile ? fallbackSource : source}
+              type="video/webm"
+            ></source>
+            <source
+              src={isMobile ? fallbackSource : source}
+              type="video/m4v"
+            ></source>
+            <source
+              src={isMobile ? fallbackSource : source}
+              type="video/mov"
+            ></source>
           </Styled.Video>
         </>
       )}

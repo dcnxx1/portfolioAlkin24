@@ -23,7 +23,12 @@ export default function Card({
 }: Props) {
   return (
     <Container style={style} color1={color1} color2={color2}>
-      <LinkToProjectPage to={linkTo}>{children}</LinkToProjectPage>
+      <LinkToProjectPage
+        style={{ textAlign: "center", textDecoration: "none" }}
+        to={linkTo}
+      >
+        {children}
+      </LinkToProjectPage>
     </Container>
   );
 }

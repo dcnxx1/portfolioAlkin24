@@ -3,6 +3,11 @@ import VectorBackground from "../../../assets/background-logo-vector.svg";
 import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/AlktunesHomeDemo.mp4";
 import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
 import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
+
+import FallbackDemoHomeScreen from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesHomeDemo.mp4";
+import FallbackDemoArtistPage from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesArtistPageDemo.mp4";
+import FallbackDemoSearchPage from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesSearchDemo.mp4";
+
 import {
   ContentContainer,
   DemoContainer,
@@ -55,6 +60,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
+              fallbackSource={FallbackDemoHomeScreen}
               style={{ width: "100%" }}
               source={DemoHomeScreen}
             />
@@ -92,6 +98,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
+              fallbackSource={FallbackDemoArtistPage}
               style={{
                 width: "100%",
               }}
@@ -139,6 +146,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
+              fallbackSource={FallbackDemoSearchPage}
               style={{ width: "100%" }}
               source={DemoSearchPage}
             />
@@ -159,7 +167,7 @@ export default function Alktunes() {
             </DescriptionText>
             <span style={{ padding: 10 }}></span>
 
-            <TagList style={{marginBottom: 10}}>
+            <TagList style={{ marginBottom: 10 }}>
               <TagList.Tag tagName="React" />
               <TagList.Tag tagName="Javascript" />
               <TagList.Tag tagName="Figma" />
@@ -175,13 +183,12 @@ export default function Alktunes() {
               <TagList.Tag tagName="Full-Stack" />
               <TagList.Tag tagName="SASS" />
             </TagList>
-          
-              <TagList style={{ flex: 1 }} title="Links">
-                <GithubButton href="#" title="Front-End" />
-                <GithubButton href="#" title="Back-End" />
-                <GithubButton href="#" title="Demo Video" />
-              </TagList>
-         
+
+            <TagList style={{ flex: 1 }} title="Links">
+              <GithubButton href="#" title="Front-End" />
+              <GithubButton href="#" title="Back-End" />
+              <GithubButton href="#" title="Demo Video" />
+            </TagList>
           </ContentContainer>
         </TechnicalOverviewContainer>
       </Grid>

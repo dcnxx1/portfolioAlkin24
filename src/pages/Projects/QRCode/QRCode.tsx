@@ -2,6 +2,7 @@ import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
 import { InViewContainer } from "../../../components/Video/Video";
 import QRCodeDemo from "../../../assets/project-assets/qrCode/videos/DemoQRcodeScreen.mp4";
+import FallbackQRCodeDemo from "../../../assets/project-assets/qrCode/videos/fallback/DemoQRcodeScreen.mp4";
 import BackgroundVectorLogo from "../../../assets/background-logo-vector.svg";
 import {
   ContentContainer,
@@ -49,7 +50,11 @@ export default function QRCode() {
               alignContent: "flex-start",
             }}
           >
-            <InViewContainer style={{ width: "100%" }} source={QRCodeDemo} />
+            <InViewContainer
+              fallbackSource={FallbackQRCodeDemo}
+              style={{ width: "100%" }}
+              source={QRCodeDemo}
+            />
           </ContentContainer>
           <ContentContainer
             style={{
