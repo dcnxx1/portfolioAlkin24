@@ -1,10 +1,17 @@
 import patterns from "../../../assets/background-logo-vector.svg";
 import DemoAddPlaylist from "../../../assets/project-assets/turnt/videos/DemoAddPlaylist.mp4";
 import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
+
 import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
-import FallbackDemoAddPlaylist from "../../../assets/project-assets/turnt/videos/fallback/DemoAddPlaylist.mp4";
-import FallbackDemoHomeScreen from "../../../assets/project-assets/turnt/videos/fallback/DemoHomeScreen.mp4";
-import FallbackDemoUpload from "../../../assets/project-assets/turnt/videos/fallback/DemoUpload.mp4";
+//@ts-ignore
+import FallbackDemoUpload from "../../../assets/project-assets/turnt/videos/fallback/DemoUpload.m4v";
+//@ts-ignore
+
+import FallbackDemoAddPlaylist from "../../../assets/project-assets/turnt/videos/fallback/DemoAddPlaylist.hevc";
+//@ts-ignore
+
+import FallbackDemoHomeScreen from "../../../assets/project-assets/turnt/videos/fallback/DemoHomeScreen.m4v";
+
 import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
 import TagList from "../../../components/Tags/TagList";
@@ -57,7 +64,7 @@ export default function Turnt() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackSource={DemoHomeScreen}
+            fallbackSource={FallbackDemoHomeScreen}
             source={DemoHomeScreen}
           />
         </PhoneContainer>

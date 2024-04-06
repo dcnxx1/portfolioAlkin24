@@ -41,7 +41,7 @@ export default function ProjectPage() {
               Scan, Deel, Vergemakkelijk: QRCode
             </Card.Description>
           </Card>
-          <Card linkTo="projects/cacaocha" color1="#ffffff" color2="#e4e4e4">
+          <Card linkTo="projects/cacaochat" color1="#ffffff" color2="#e4e4e4">
             <Card.Image source={SamsungCacaoChat} />
             <Card.Title style={{ color: "black" }}>CacaoChat</Card.Title>
             <Card.Description style={{ color: "black" }}>

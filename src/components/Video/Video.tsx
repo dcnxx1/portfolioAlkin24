@@ -30,9 +30,10 @@ export const InViewContainer = ({
         <>
           <Styled.Video
             preload="auto"
-            playsInline
+            playsInline={true}
             onClick={onClick}
             as="video"
+            defaultChecked
             muted={muted}
             ref={ref}
             autoPlay={inView ?? true}
@@ -43,22 +44,6 @@ export const InViewContainer = ({
               style={style}
               src={isMobile ? fallbackSource : source}
             ></Styled.Source>
-            <source
-              src={isMobile ? fallbackSource : source}
-              type="video/mp4"
-            ></source>
-            <source
-              src={isMobile ? fallbackSource : source}
-              type="video/webm"
-            ></source>
-            <source
-              src={isMobile ? fallbackSource : source}
-              type="video/m4v"
-            ></source>
-            <source
-              src={isMobile ? fallbackSource : source}
-              type="video/mov"
-            ></source>
           </Styled.Video>
         </>
       )}
