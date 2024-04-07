@@ -26,6 +26,7 @@ import {
 
 export default function Turnt() {
   return (
+    <div style={{display: 'block', overflow: 'hidden'}}>
     <Container
       props={{
         style: {
@@ -180,5 +181,6 @@ export default function Turnt() {
         </TechContainer>
       </MobileGrid>
     </Container>
+    </div>
   );
 }

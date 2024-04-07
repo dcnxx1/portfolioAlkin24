@@ -1,4 +1,3 @@
-import { useCallback, useState } from "react";
 import * as Styled from "./Video.styled";
 import { isMobile } from "react-device-detect";
 interface Props {

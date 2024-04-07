@@ -46,7 +46,7 @@ export const MobileGrid = styled.div<{ reverse?: boolean }>`
   height: 100%;
   flex-basis: 200px;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 30% 70%;
+  grid-template-rows: 0.5fr 1fr;
 
   grid-template-areas: ${({ reverse }) =>
     reverse

@@ -184,9 +184,14 @@ export default function Alktunes() {
             </TagList>
 
             <TagList style={{ flex: 1 }} title="Links">
-              <GithubButton href="#" title="Front-End" />
-              <GithubButton href="#" title="Back-End" />
-              <GithubButton href="#" title="Demo Video" />
+              <GithubButton
+                href="https://github.com/dcnxx1/alktunes"
+                title="Front-End"
+              />
+              <GithubButton
+                href="https://github.com/dcnxx1/alktunes_server"
+                title="Back-End"
+              />
             </TagList>
           </ContentContainer>
         </TechnicalOverviewContainer>

@@ -122,7 +122,10 @@ export default function Kelli() {
               <TagList.Tag tagName="Figma" />
             </TagList>
             <TagList title="Links">
-              <GithubButton href="" title="Code" />
+              <GithubButton
+                href="https://github.com/dcnxx1/kelli"
+                title="Code"
+              />
             </TagList>
           </ContentContainer>
         </TechContainer>

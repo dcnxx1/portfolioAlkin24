@@ -23,8 +23,9 @@ export default function QRCode() {
     >
       <Grid
         style={{
+          display: "block",
           gridTemplateColumns: `repeat(1, 1fr)`,
-          gap: "100px",
+          height: "min-content",
           gridAutoRows: "initial",
         }}
       >
@@ -59,7 +60,7 @@ export default function QRCode() {
           <ContentContainer
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: "column",
 
               gap: 10,
             }}
@@ -76,8 +77,14 @@ export default function QRCode() {
               <TagList.Tag tagName="Cloudinary" />
             </TagList>
             <TagList title="Links">
-              <GithubButton href="#" title="Front-End" />
-              <GithubButton href="#" title="Back-End" />
+              <GithubButton
+                href="https://github.com/dcnxx1/qrCode"
+                title="Front-End"
+              />
+              <GithubButton
+                href="https://github.com/dcnxx1/qrcode-backend"
+                title="Back-End"
+              />
             </TagList>
           </ContentContainer>
         </Grid.Item>

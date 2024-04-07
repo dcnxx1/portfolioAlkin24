@@ -60,8 +60,8 @@ export default function CacaoChat() {
               <TagList.Tag tagName="Javascript" />
             </TagList>
             <TagList title="Links">
-              <GithubButton href="" title="Front-End" />
-              <GithubButton href="" title="Back-End" />
+              <GithubButton href="https://github.com/dcnxx1/Cacaochat-Mobile" title="Mobiel" />
+              <GithubButton href="https://github.com/dcnxx1/CacaoChat-Browser" title="Website" />
             </TagList>
           </ContentContainer>
         </TechincalOverviewContainer>
