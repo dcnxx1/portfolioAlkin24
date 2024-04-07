@@ -19,12 +19,14 @@ export const ContentContainer = styled.div`
 
 export const HeaderText = styled.h1`
   color: white;
+  font-family: "LTHoopSemiBold", sans-serif;
 `;
 
 export const DescriptionText = styled.p`
   color: white;
   font-weight: normal;
   font-size: 18px;
+  font-family: "LTHoopRegular", sans-serif;
 `;
 
 export const SubHeaderText = styled.h2`

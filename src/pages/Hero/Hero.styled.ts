@@ -16,7 +16,7 @@ export const Content = styled.div`
   flex-direction: column;
   display: flex;
   width: 100%;
-
+  gap: 40px;
   ${Image} {
     width: 300px;
   }
