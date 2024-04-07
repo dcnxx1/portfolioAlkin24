@@ -10,9 +10,10 @@ import {
   NavContent,
   BurgerMenuContainer,
   BurgerMenu,
+  NavLink,
 } from "./Nav.styled";
 import burgermenu from "../assets/burger-bar.png";
-import { NavLink } from "react-router-dom";
+
 import { DescriptionText } from "../pages/Projects/Turnt/Turnt.styled";
 
 export default function Nav({
@@ -25,21 +26,21 @@ export default function Nav({
       <InnerContainer>
         <Content>
           <LogoContainer>
-            <NavLink to="/">
+            <NavLink href="/">
               <Logo src={logo} />
             </NavLink>
           </LogoContainer>
           <NavContent>
-            <NavLink to="Hero">
+            <NavLink href="#Hero">
               <DescriptionText>Intro</DescriptionText>
             </NavLink>
-            <NavLink to="About">
+            <NavLink href="#About">
               <DescriptionText>Over</DescriptionText>
             </NavLink>
-            <NavLink to="Projects">
+            <NavLink href="#Projects">
               <DescriptionText>Projecten</DescriptionText>
             </NavLink>
-            <NavLink to="#">
+            <NavLink href="#">
               <DescriptionText>CV</DescriptionText>
             </NavLink>
           </NavContent>

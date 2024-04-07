@@ -21,3 +21,11 @@ export const Video = styled.video.attrs({
 export const Source = styled.source.attrs({
   type: "application/octet-stream",
 })``;
+
+export const DemoImage = styled.img`
+  width: 100%;
+
+  pointer-events: none;
+  object-fit: contain;
+  user-select: none;
+`;

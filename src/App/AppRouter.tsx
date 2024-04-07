@@ -9,11 +9,11 @@ import QRCode from "../pages/Projects/QRCode/QRCode";
 import Turnt from "../pages/Projects/Turnt/Turnt";
 
 import { useCallback, useEffect, useState } from "react";
+import { OpacityContainer } from "../components/Container/OpacityContainer.styled";
 import HomeScreen from "../Homescreen/HomeScreen";
-import NavSlideMenu from "../nav/NavSlideMenu";
 import OutsideAlerter from "../hooks/OutsideAlerter";
 import useWindowSize from "../hooks/useWindowResize";
-import { OpacityContainer } from "../components/Container/OpacityContainer.styled";
+import NavSlideMenu from "../nav/NavSlideMenu";
 
 export default function AppRouter() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -25,20 +25,20 @@ export default function AppRouter() {
 
   useEffect(() => {
     if (width >= 900) {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
       setIsBurgerMenuOpen(false);
     }
   }, [width]);
 
   useEffect(() => {
     if (isBurgerMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
 
       return;
     }
-    document.body.style.overflow = "scroll";
+    document.body.style.overflowY = "scroll";
     return () => {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     };
   }, [isBurgerMenuOpen]);
 

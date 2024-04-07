@@ -1,16 +1,16 @@
+import BackgroundVectorLogo from "../../../assets/background-logo-vector.svg";
+import ImageQRCodeDemo from "../../../assets/project-assets/qrCode/images/DemoQRcodeScreen.png";
+import QRCodeDemo from "../../../assets/project-assets/qrCode/videos/DemoQRcodeScreen.mp4";
+import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
 import Grid from "../../../components/Grid/Grid";
+import TagList from "../../../components/Tags/TagList";
 import { InViewContainer } from "../../../components/Video/Video";
-import QRCodeDemo from "../../../assets/project-assets/qrCode/videos/DemoQRcodeScreen.mp4";
-import FallbackQRCodeDemo from "../../../assets/project-assets/qrCode/videos/fallback/DemoQRcodeScreen.mp4";
-import BackgroundVectorLogo from "../../../assets/background-logo-vector.svg";
 import {
   ContentContainer,
   DescriptionText,
   HeaderText,
 } from "../Turnt/Turnt.styled";
-import TagList from "../../../components/Tags/TagList";
-import GithubButton from "../../../components/Button/GithubButton";
 
 export default function QRCode() {
   return (
@@ -51,7 +51,7 @@ export default function QRCode() {
             }}
           >
             <InViewContainer
-              fallbackSource={FallbackQRCodeDemo}
+              fallbackImage={ImageQRCodeDemo}
               style={{ width: "100%" }}
               source={QRCodeDemo}
             />

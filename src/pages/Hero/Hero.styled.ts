@@ -5,7 +5,7 @@ import { DescriptionText } from "../Projects/Turnt/Turnt.styled";
 
 export const Container = styled.div`
   height: auto;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 75px);
 `;
 
 export const Image = styled.img``;

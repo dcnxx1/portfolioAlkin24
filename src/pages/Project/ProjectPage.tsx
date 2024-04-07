@@ -11,9 +11,9 @@ import { HeaderText } from "../Projects/Turnt/Turnt.styled";
 
 export default function ProjectPage() {
   return (
-    <Container id="Projects" style={{ paddingBlock: "10px" }}>
+    <Container style={{ paddingBlock: "10px" }}>
       <InnerContainer>
-        <HeaderText>Projecten</HeaderText>
+        <HeaderText id="Projects">Projecten</HeaderText>
         <Grid style={{ padding: 10 }}>
           <Card linkTo="projects/turnt" color1="#ea698b" color2="#8b23d1">
             <Card.Image source={IphoneTurnt} />

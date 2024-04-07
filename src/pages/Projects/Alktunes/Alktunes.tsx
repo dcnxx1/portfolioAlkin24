@@ -3,10 +3,9 @@ import VectorBackground from "../../../assets/background-logo-vector.svg";
 import DemoHomeScreen from "../../../assets/project-assets/alktunes/demos/AlktunesHomeDemo.mp4";
 import DemoArtistPage from "../../../assets/project-assets/alktunes/demos/AlktunesArtistPageDemo.mp4";
 import DemoSearchPage from "../../../assets/project-assets/alktunes/demos/AlktunesSearchDemo.mp4";
-
-import FallbackDemoHomeScreen from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesHomeDemo.mp4";
-import FallbackDemoArtistPage from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesArtistPageDemo.mp4";
-import FallbackDemoSearchPage from "../../../assets/project-assets/alktunes/demos/fallback/AlktunesSearchDemo.mp4";
+import ImageHomeScreen from "../../../assets/project-assets/alktunes/images/AlktunesHomeDemo.png";
+import ImageArtistPage from "../../../assets/project-assets/alktunes/images/AlktunesArtistPageDemo.png";
+import ImageSearchPage from "../../../assets/project-assets/alktunes/images/AlktunesSearchDemo.png";
 
 import {
   ContentContainer,
@@ -60,7 +59,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
-              fallbackSource={FallbackDemoHomeScreen}
+              fallbackImage={ImageHomeScreen}
               style={{ width: "100%" }}
               source={DemoHomeScreen}
             />
@@ -98,7 +97,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
-              fallbackSource={FallbackDemoArtistPage}
+              fallbackImage={ImageArtistPage}
               style={{
                 width: "100%",
               }}
@@ -146,7 +145,7 @@ export default function Alktunes() {
             }}
           >
             <InViewContainer
-              fallbackSource={FallbackDemoSearchPage}
+              fallbackImage={ImageSearchPage}
               style={{ width: "100%" }}
               source={DemoSearchPage}
             />

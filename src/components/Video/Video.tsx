@@ -6,7 +6,7 @@ interface Props {
   style?: React.CSSProperties;
   muted?: boolean;
   onClick?: () => void;
-  fallbackSource?: any;
+  fallbackImage?: any;
 }
 
 import { InView } from "react-intersection-observer";
@@ -16,7 +16,7 @@ export const InViewContainer = ({
   style,
   muted = true,
   onClick,
-  fallbackSource,
+  fallbackImage,
 }: Props) => {
   const [isPlaying, setPlaying] = useState(false);
 
@@ -25,26 +25,27 @@ export const InViewContainer = ({
   }, [isPlaying]);
 
   return (
-    <InView style={{}} onChange={handleIsPlaying}>
+    <InView style={style} onChange={handleIsPlaying}>
       {({ inView, ref }) => (
         <>
-          <Styled.Video
-            preload="auto"
-            playsInline={true}
-            onClick={onClick}
-            as="video"
-            defaultChecked
-            muted={muted}
-            ref={ref}
-            autoPlay={inView ?? true}
-            style={style}
-            src={isMobile ? fallbackSource : source}
-          >
-            <Styled.Source
+          {isMobile ? (
+            <Styled.DemoImage src={fallbackImage} />
+          ) : (
+            <Styled.Video
+              preload="auto"
+              playsInline={true}
+              onClick={onClick}
+              as="video"
+              defaultChecked
+              muted={muted}
+              ref={ref}
+              autoPlay={inView ?? true}
               style={style}
-              src={isMobile ? fallbackSource : source}
-            ></Styled.Source>
-          </Styled.Video>
+              src={source}
+            >
+              <Styled.Source style={style} src={source}></Styled.Source>
+            </Styled.Video>
+          )}
         </>
       )}
     </InView>

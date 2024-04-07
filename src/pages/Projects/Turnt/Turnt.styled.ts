@@ -42,7 +42,7 @@ export const MobileGrid = styled.div<{ reverse?: boolean }>`
   display: grid;
   width: 100%;
   height: 100%;
-
+  flex-basis: 200px;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 30% 70%;
 
@@ -57,11 +57,11 @@ export const MobileGrid = styled.div<{ reverse?: boolean }>`
   `};
 
   @media ${device.md} {
-    gap: 20px;
     place-content: center;
     place-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 70% 10%;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+
     grid-template-areas:
       "InfoContainer"
       "PhoneContainer"

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../breakpoints";
 
@@ -14,7 +13,6 @@ export const Container = styled.nav`
 export const InnerContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: orange;
   max-width: 1200px;
   margin: 0 auto;
   @media ${device.lg} {
@@ -32,9 +30,7 @@ export const Content = styled.div`
   padding: 5px;
 `;
 
-export const LogoContainer = styled.div`
-  border: 2px solid white;
-`;
+export const LogoContainer = styled.div``;
 
 export const Logo = styled.img`
   width: 75px;
@@ -51,8 +47,8 @@ export const NavContent = styled.div`
     display: none;
   }
 `;
-export const NavLink = styled(Link)`
-  background: red;
+export const NavLink = styled.a`
+  text-decoration: none;
 `;
 
 export const BurgerMenuContainer = styled.div`

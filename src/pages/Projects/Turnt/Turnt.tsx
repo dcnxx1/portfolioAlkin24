@@ -3,19 +3,16 @@ import DemoAddPlaylist from "../../../assets/project-assets/turnt/videos/DemoAdd
 import DemoHomeScreen from "../../../assets/project-assets/turnt/videos/DemoHomeScreen.mp4";
 
 import DemoUpload from "../../../assets/project-assets/turnt/videos/DemoUpload.mp4";
-//@ts-ignore
-import FallbackDemoUpload from "../../../assets/project-assets/turnt/videos/fallback/DemoUpload.m4v";
-//@ts-ignore
 
-import FallbackDemoAddPlaylist from "../../../assets/project-assets/turnt/videos/fallback/DemoAddPlaylist.hevc";
-//@ts-ignore
-
-import FallbackDemoHomeScreen from "../../../assets/project-assets/turnt/videos/fallback/DemoHomeScreen.m4v";
+import ImageAddPlaylist from "../../../assets/project-assets/turnt/images/DemoAddPlaylist.png";
+import ImageHomeScreen from "../../../assets/project-assets/turnt/images/DemoHomeScreen.png";
+import ImageUpload from "../../../assets/project-assets/turnt/images/DemoUpload.png";
 
 import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
 import TagList from "../../../components/Tags/TagList";
 import { InViewContainer } from "../../../components/Video/Video";
+
 import {
   ContentContainer,
   DescriptionText,
@@ -64,7 +61,7 @@ export default function Turnt() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackSource={FallbackDemoHomeScreen}
+            fallbackImage={ImageHomeScreen}
             source={DemoHomeScreen}
           />
         </PhoneContainer>
@@ -97,7 +94,7 @@ export default function Turnt() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackSource={FallbackDemoAddPlaylist}
+            fallbackImage={ImageAddPlaylist}
             source={DemoAddPlaylist}
           />
         </PhoneContainer>
@@ -134,10 +131,7 @@ export default function Turnt() {
           </ContentContainer>
         </InfoContainer>
         <PhoneContainer>
-          <InViewContainer
-            fallbackSource={FallbackDemoUpload}
-            source={DemoUpload}
-          />
+          <InViewContainer fallbackImage={ImageUpload} source={DemoUpload} />
         </PhoneContainer>
         <TechContainer>
           <ContentContainer style={{ paddingBottom: 10 }}>

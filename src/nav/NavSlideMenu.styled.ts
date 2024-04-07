@@ -30,10 +30,13 @@ export const Content = styled.div`
 `;
 export const MenuContainer = styled.div``;
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled.a`
   font-size: 14px;
   color: white;
   text-decoration: none;
+
+  scroll-margin-top: 6rem;
+  overflow: initial !important;
   ${DescriptionText} {
     font-size: 28px;
     padding-block: 20px;

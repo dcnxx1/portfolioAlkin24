@@ -23,16 +23,16 @@ export default function NavSlideMenu({
       <Content>
         <HeaderText>Menu</HeaderText>
         <MenuContainer>
-          <MenuLink onClick={toggleBurgerMenu} to="#Hero">
+          <MenuLink onClick={toggleBurgerMenu} href="#Hero">
             <DescriptionText>Home</DescriptionText>
           </MenuLink>
-          <MenuLink onClick={toggleBurgerMenu} to="#About">
+          <MenuLink onClick={toggleBurgerMenu} href="#About">
             <DescriptionText>Over</DescriptionText>
           </MenuLink>
-          <MenuLink onClick={toggleBurgerMenu} to="#Projects">
+          <MenuLink onClick={toggleBurgerMenu} href="#Projects">
             <DescriptionText>Projecten</DescriptionText>
           </MenuLink>
-          <MenuLink onClick={toggleBurgerMenu} to="/">
+          <MenuLink onClick={toggleBurgerMenu} href="/">
             <DescriptionText>CV</DescriptionText>
           </MenuLink>
         </MenuContainer>

@@ -6,13 +6,13 @@ export default function HomeScreen() {
   return (
     <div
       style={{
-        backgroundImage: `url(${BackgroundVector})`,
-        background: "#3523a9",
+        background: `url(${BackgroundVector}) #3523a9`,
+        backgroundColor: "#3523a9",
         height: "100%",
         minHeight: " 100vh",
       }}
     >
-      <Hero  />
+      <Hero />
       <About />
       <ProjectPage />
     </div>

@@ -1,4 +1,3 @@
-import "./style.css";
 import me from "../../assets/me.jpg";
 import socialMedias from "../../assets/social_medias.svg";
 import { DescriptionText, HeaderText } from "../Projects/Turnt/Turnt.styled";

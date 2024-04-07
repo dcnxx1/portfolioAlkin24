@@ -3,9 +3,8 @@ import backgroundVector from "../../../assets/background-logo-vector.svg";
 
 import DemoCharacters from "../../../assets/project-assets/kelli/demo/DemoCharacters.mp4";
 import DemoKevin from "../../../assets/project-assets/kelli/demo/DemoKevin.mp4";
-
-import FallbackDemoCharacters from "../../../assets/project-assets/kelli/demo/fallback/DemoCharacters.mp4";
-import FallbackDemoKevin from "../../../assets/project-assets/kelli/demo/fallback/DemoKevin.mp4";
+import ImageCharacters from "../../../assets/project-assets/kelli/images/DemoCharacters.png";
+import ImageKevin from "../../../assets/project-assets/kelli/images/DemoKevin.png";
 
 import GithubButton from "../../../components/Button/GithubButton";
 import Container from "../../../components/Container/Container";
@@ -21,6 +20,7 @@ import {
   SubHeaderText,
   TechContainer,
 } from "../Turnt/Turnt.styled";
+
 export default function Kelli() {
   const [isMuted, setIsMuted] = useState(true);
 
@@ -57,7 +57,7 @@ export default function Kelli() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackSource={FallbackDemoKevin}
+            fallbackImage={ImageKevin}
             onClick={toggleIsMuted}
             muted={isMuted}
             style={{
@@ -91,7 +91,7 @@ export default function Kelli() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackSource={FallbackDemoCharacters}
+            fallbackImage={ImageCharacters}
             style={{
               borderRadius: "80px",
             }}
