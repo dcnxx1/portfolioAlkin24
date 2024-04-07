@@ -9,8 +9,6 @@ interface Props {
   fallbackImage?: any;
 }
 
-import { InView } from "react-intersection-observer";
-
 export const InViewContainer = ({
   source,
   style,
@@ -18,37 +16,22 @@ export const InViewContainer = ({
   onClick,
   fallbackImage,
 }: Props) => {
-  const [isPlaying, setPlaying] = useState(false);
-
-  const handleIsPlaying = useCallback(() => {
-    setPlaying(!isPlaying);
-  }, [isPlaying]);
-
-  return (
-    <InView style={style} onChange={handleIsPlaying}>
-      {({ inView, ref }) => (
-        <>
-          {isMobile ? (
-            <Styled.DemoImage src={fallbackImage} />
-          ) : (
-            <Styled.Video
-              preload="auto"
-              playsInline={true}
-              onClick={onClick}
-              as="video"
-              defaultChecked
-              muted={muted}
-              ref={ref}
-              autoPlay={inView ?? true}
-              style={style}
-              src={source}
-            >
-              <Styled.Source style={style} src={source}></Styled.Source>
-            </Styled.Video>
-          )}
-        </>
-      )}
-    </InView>
+  return isMobile ? (
+    <Styled.DemoImage src={fallbackImage} />
+  ) : (
+    <Styled.Video
+      preload="auto"
+      playsInline={true}
+      onClick={onClick}
+      as="video"
+      defaultChecked
+      muted={muted}
+      autoPlay={true}
+      style={style}
+      src={source}
+    >
+      <Styled.Source style={style} src={source}></Styled.Source>
+    </Styled.Video>
   );
 };
 
