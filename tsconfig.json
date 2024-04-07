@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": "/",
+
     "jsx": "react-jsx",
 
     /* Linting */
