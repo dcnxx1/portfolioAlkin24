@@ -12,7 +12,7 @@ import {
 
 export default function About(): JSX.Element {
   return (
-    <Container>
+    <Container id="About">
       <InnerContainer>
         <ContentContainer>
           <Content>

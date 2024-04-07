@@ -11,7 +11,7 @@ import { HeaderText } from "../Projects/Turnt/Turnt.styled";
 
 export default function ProjectPage() {
   return (
-    <Container style={{ paddingBlock: "10px" }}>
+    <Container id="Projects" style={{ paddingBlock: "10px" }}>
       <InnerContainer>
         <HeaderText>Projecten</HeaderText>
         <Grid style={{ padding: 10 }}>

@@ -6,7 +6,6 @@ import { DescriptionText } from "../Projects/Turnt/Turnt.styled";
 export const Container = styled.div`
   height: auto;
   min-height: calc(100vh - 120px);
-  background: url(${BackgroundLogoVector});
 `;
 
 export const Image = styled.img``;

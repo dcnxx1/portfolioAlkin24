@@ -41,26 +41,28 @@ export default function CacaoChat() {
           </ContentContainer>
         </OverviewContainer>
         <TechincalOverviewContainer>
-          <DescriptionText>
-            CacaoChat is gebouwd met Kotlin in de Android omgeving. Voor de
-            backend wordt een NodeJS Express server gebruikt om de client te
-            laten communiceren met de back-end. Socket.IO zorgt voor een soepele
-            uitwisseling van berichten
-          </DescriptionText>
-          <TagList style={{ paddingBottom: 10 }}>
-            <TagList.Tag tagName="Android" />
-            <TagList.Tag tagName="Kotlin" />
-            <TagList.Tag tagName="NodeJS" />
-            <TagList.Tag tagName="ExpressJS" />
-            <TagList.Tag tagName="Socket.IO" />
-            <TagList.Tag tagName="HTML" />
-            <TagList.Tag tagName="CSS" />
-            <TagList.Tag tagName="Javascript" />
-          </TagList>
-          <TagList title="Links">
-            <GithubButton href="" title="Front-End" />
-            <GithubButton href="" title="Back-End" />
-          </TagList>
+          <ContentContainer>
+            <DescriptionText>
+              CacaoChat is gebouwd met Kotlin in de Android omgeving. Voor de
+              backend wordt een NodeJS Express server gebruikt om de client te
+              laten communiceren met de back-end. Socket.IO zorgt voor een
+              soepele uitwisseling van berichten
+            </DescriptionText>
+            <TagList style={{ paddingBottom: 10 }}>
+              <TagList.Tag tagName="Android" />
+              <TagList.Tag tagName="Kotlin" />
+              <TagList.Tag tagName="NodeJS" />
+              <TagList.Tag tagName="ExpressJS" />
+              <TagList.Tag tagName="Socket.IO" />
+              <TagList.Tag tagName="HTML" />
+              <TagList.Tag tagName="CSS" />
+              <TagList.Tag tagName="Javascript" />
+            </TagList>
+            <TagList title="Links">
+              <GithubButton href="" title="Front-End" />
+              <GithubButton href="" title="Back-End" />
+            </TagList>
+          </ContentContainer>
         </TechincalOverviewContainer>
 
         <DemoContainer>
