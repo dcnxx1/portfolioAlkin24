@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
-import { DescriptionText } from "../pages/Projects/Turnt/Turnt.styled";
 import BackgroundVector from "../assets/background-logo-vector.svg";
+import { DescriptionText } from "../pages/Projects/Turnt/Turnt.styled";
 interface ContainerProps {
   isBurgerMenuOpen: boolean;
 }
@@ -35,7 +34,6 @@ export const MenuLink = styled.a`
   color: white;
   text-decoration: none;
 
-  scroll-margin-top: 6rem;
   overflow: initial !important;
   ${DescriptionText} {
     font-size: 28px;

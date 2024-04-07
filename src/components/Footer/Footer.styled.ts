@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BackgroundVector from "../../assets/background-logo-vector.svg";
 import { device } from "../../breakpoints";
 export const Container = styled.div`
   width: 100%;

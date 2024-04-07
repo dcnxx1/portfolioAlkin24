@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BackgroundLogoVector from "../../assets/background-logo-vector.svg";
 import { device } from "../../breakpoints";
 import { DescriptionText } from "../Projects/Turnt/Turnt.styled";
 

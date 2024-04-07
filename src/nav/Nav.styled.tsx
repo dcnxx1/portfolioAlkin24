@@ -52,7 +52,6 @@ export const NavLink = styled.a`
 `;
 
 export const BurgerMenuContainer = styled.div`
-  border: 2px solid white;
   display: none;
   @media ${device.md} {
     display: flex;

@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   min-height: calc(100vh - 175px);
-  padding-block: 50px;
+  padding-block: 20px;
   @media ${device.lg} {
     min-height: auto;
     height: 100%;

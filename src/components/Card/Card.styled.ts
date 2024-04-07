@@ -20,7 +20,6 @@ export const Image = styled.img`
 export const LinkToProjectPage = styled(Link)``;
 
 export const Container = styled.div<ContainerProps>`
-  aspect-ratio: 1 /1;
   width: 95%;
   height: 90%;
   display: flex;
