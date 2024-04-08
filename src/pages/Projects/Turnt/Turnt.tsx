@@ -95,7 +95,7 @@ export default function Turnt() {
         </InfoContainer>
         <PhoneContainer>
           <InViewContainer
-            fallbackImage={ImageAddPlaylist}
+            fallbackImage={ImageUpload}
             source={DemoAddPlaylist}
           />
         </PhoneContainer>
@@ -132,7 +132,7 @@ export default function Turnt() {
           </ContentContainer>
         </InfoContainer>
         <PhoneContainer>
-          <InViewContainer fallbackImage={ImageUpload} source={DemoUpload} />
+          <InViewContainer fallbackImage={ImageAddPlaylist} source={DemoUpload} />
         </PhoneContainer>
         <TechContainer>
           <ContentContainer style={{ paddingBottom: 10 }}>
@@ -175,7 +175,7 @@ export default function Turnt() {
             </TagList>
             <TagList title="Links">
               <GithubButton href="#" title="Back-end" />
-              <GithubButton href="#" title="Front-end" />
+              <GithubButton href="https://github.com/dcnxx1/Turnt" title="Front-end" />
             </TagList>
           </ContentContainer>
         </TechContainer>

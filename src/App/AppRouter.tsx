@@ -16,6 +16,7 @@ import useWindowSize from "../hooks/useWindowResize";
 import NavSlideMenu from "../nav/NavSlideMenu";
 import PageNotFound from "../pages/Projects/PageNotFound/PageNotFound";
 import ScrollToTopOnRouteChange from "../components/ScrollToTop/ScrollToTop";
+import CV from "../pages/CV/CV";
 
 export default function AppRouter() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -77,6 +78,9 @@ export default function AppRouter() {
             <Route path="*" element={<QRCode />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
+        </Route>
+        <Route path="cv" element={<CV />}>
+          <Route path="*" element={<CV />} />
         </Route>
         <Route path="*" element={<HomeScreen />} />
       </Routes>
