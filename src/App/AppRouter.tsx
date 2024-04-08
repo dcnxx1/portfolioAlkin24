@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  RedirectFunction,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import Foooter from "../components/Footer/Footer";
 import Nav from "../nav/Nav";
@@ -21,6 +15,7 @@ import OutsideAlerter from "../hooks/OutsideAlerter";
 import useWindowSize from "../hooks/useWindowResize";
 import NavSlideMenu from "../nav/NavSlideMenu";
 import PageNotFound from "../pages/Projects/PageNotFound/PageNotFound";
+import ScrollToTopOnRouteChange from "../components/ScrollToTop/ScrollToTop";
 
 export default function AppRouter() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -61,16 +56,26 @@ export default function AppRouter() {
       )}
       <OpacityContainer isSlideMenuOpen={isBurgerMenuOpen} />
       <Nav onPressToggleBurgerMenu={toggleBurgerMenu} />
+      <ScrollToTopOnRouteChange />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/projects/">
+          <Route path="" element={<Navigate to={"/#Projects"} />} />
           <Route path="turnt" element={<Turnt />}>
             <Route path="*" element={<Turnt />} />
           </Route>
-          <Route path="alktunes" element={<Alktunes />} />
-          <Route path="kelli" element={<Kelli />} />
-          <Route path="cacaochat" element={<CacaoChat />} />
-          <Route path="qrcode" element={<QRCode />} />
+          <Route path="alktunes" element={<Alktunes />}>
+            <Route path="*" element={<Alktunes />} />
+          </Route>
+          <Route path="kelli" element={<Kelli />}>
+            <Route path="*" element={<Kelli />} />
+          </Route>
+          <Route path="cacaochat" element={<CacaoChat />}>
+            <Route path="*" element={<CacaoChat />} />
+          </Route>
+          <Route path="qrcode" element={<QRCode />}>
+            <Route path="*" element={<QRCode />} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route path="*" element={<HomeScreen />} />
