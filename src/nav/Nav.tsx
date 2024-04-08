@@ -31,16 +31,16 @@ export default function Nav({
             </NavLink>
           </LogoContainer>
           <NavContent>
-            <NavLink href="#Hero">
+            <NavLink href="/#Hero">
               <DescriptionText>Intro</DescriptionText>
             </NavLink>
-            <NavLink href="#About">
+            <NavLink href="/#About">
               <DescriptionText>Over</DescriptionText>
             </NavLink>
-            <NavLink href="#Projects">
+            <NavLink href="/#Projects">
               <DescriptionText>Projecten</DescriptionText>
             </NavLink>
-            <NavLink href="#">
+            <NavLink href="/cv">
               <DescriptionText>CV</DescriptionText>
             </NavLink>
           </NavContent>

@@ -32,7 +32,7 @@ export default function NavSlideMenu({
           <MenuLink onClick={toggleBurgerMenu} href="/#Projects">
             <DescriptionText>Projecten</DescriptionText>
           </MenuLink>
-          <MenuLink onClick={toggleBurgerMenu} href="/">
+          <MenuLink onClick={toggleBurgerMenu} href="/cv">
             <DescriptionText>CV</DescriptionText>
           </MenuLink>
         </MenuContainer>
