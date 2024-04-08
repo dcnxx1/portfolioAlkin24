@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  RedirectFunction,
+  Navigate,
+} from "react-router-dom";
 
 import Foooter from "../components/Footer/Footer";
 import Nav from "../nav/Nav";
@@ -14,6 +20,7 @@ import HomeScreen from "../Homescreen/HomeScreen";
 import OutsideAlerter from "../hooks/OutsideAlerter";
 import useWindowSize from "../hooks/useWindowResize";
 import NavSlideMenu from "../nav/NavSlideMenu";
+import PageNotFound from "../pages/Projects/PageNotFound/PageNotFound";
 
 export default function AppRouter() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -56,15 +63,17 @@ export default function AppRouter() {
       <Nav onPressToggleBurgerMenu={toggleBurgerMenu} />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/projects">
-          <Route path="turnt" element={<Turnt />} />
+        <Route path="/projects/">
+          <Route path="turnt" element={<Turnt />}>
+            <Route path="*" element={<Turnt />} />
+          </Route>
           <Route path="alktunes" element={<Alktunes />} />
           <Route path="kelli" element={<Kelli />} />
           <Route path="cacaochat" element={<CacaoChat />} />
           <Route path="qrcode" element={<QRCode />} />
-          <Route path="*" element={<div>Broer...</div>} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route path="*" element={<div>Errorista</div>} />
+        <Route path="*" element={<HomeScreen />} />
       </Routes>
 
       <Foooter />

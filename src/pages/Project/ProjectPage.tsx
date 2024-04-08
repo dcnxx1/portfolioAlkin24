@@ -9,39 +9,43 @@ import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.s
 import { Grid, Container, InnerContainer } from "./ProjectPage.styled";
 import { HeaderText } from "../Projects/Turnt/Turnt.styled";
 
-export default function ProjectPage() {
+interface Props {
+  relativePath?: string;
+}
+
+export default function ProjectPage({}: Props) {
   return (
     <Container style={{ paddingBlock: "10px" }}>
       <InnerContainer>
         <HeaderText id="Projects">Projecten</HeaderText>
         <Grid style={{ padding: 10 }}>
-          <Card linkTo="projects/turnt" color1="#ea698b" color2="#8b23d1">
+          <Card linkTo={"/turnt"} color1="#ea698b" color2="#8b23d1">
             <Card.Image source={IphoneTurnt} />
             <Card.Title>Turnt</Card.Title>
             <Card.Description>
               Ontdek muziek in slechts 30 seconden
             </Card.Description>
           </Card>
-          <Card linkTo="projects/alktunes" color1="#000000" color2="#6c6a6d">
+          <Card linkTo={"/alktunes"} color1="#000000" color2="#6c6a6d">
             <Card.Image source={LaptopAlktunes} />
             <Card.Title>Alktunes</Card.Title>
             <Card.Description>
               Luister naar je favoriete artiesten
             </Card.Description>
           </Card>
-          <Card linkTo="projects/kelli" color1="#ffb900" color2="#ee9b0f">
+          <Card linkTo={"/kelli"} color1="#ffb900" color2="#ee9b0f">
             <Card.Image source={iPhoneKelli} />
             <Card.Title>Kelli</Card.Title>
             <Card.Description>Laat je woorden tot leven komen</Card.Description>
           </Card>
-          <Card linkTo="projects/qrcode" color1="#d63879" color2="#701d3f">
+          <Card linkTo={"/qrcode"} color1="#d63879" color2="#701d3f">
             <Card.Image source={iMacQrCode} />
             <Card.Title>QRCode</Card.Title>
             <Card.Description>
               Scan, Deel, Vergemakkelijk: QRCode
             </Card.Description>
           </Card>
-          <Card linkTo="projects/cacaochat" color1="#ffffff" color2="#e4e4e4">
+          <Card linkTo={"/cacaochat"} color1="#ffffff" color2="#e4e4e4">
             <Card.Image source={SamsungCacaoChat} />
             <Card.Title style={{ color: "black" }}>CacaoChat</Card.Title>
             <Card.Description style={{ color: "black" }}>

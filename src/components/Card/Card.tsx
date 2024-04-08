@@ -5,6 +5,7 @@ import {
 } from "../../pages/Projects/Turnt/Turnt.styled";
 import { Container, Image, LinkToProjectPage } from "./Card.styled";
 import { ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 
 interface Props {
   color1: string;
@@ -21,11 +22,21 @@ export default function Card({
   linkTo,
   style,
 }: Props) {
+  const location = useLocation();
+  const isInProjects = location.pathname.includes("/projects");
+  console.log("location :>>", location);
+  // Adjust link based on whether we are already in the projects route
+  const adjustedLinkTo = isInProjects
+    ? "/projects" + linkTo
+    : `/projects${linkTo}`;
+
   return (
     <Container style={style} color1={color1} color2={color2}>
       <LinkToProjectPage
         style={{ textAlign: "center", textDecoration: "none" }}
-        to={linkTo}
+        to={{
+          pathname: adjustedLinkTo,
+        }}
       >
         {children}
       </LinkToProjectPage>
