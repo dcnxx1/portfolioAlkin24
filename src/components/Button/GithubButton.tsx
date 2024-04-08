@@ -14,7 +14,7 @@ export default function GithubButton({ title, href }: Props) {
         display: "flex",
         alignItems: "center",
         width: "fit-content",
-
+        textDecoration: "none",
         justifyContent: "space-evenly",
         paddingInline: "10px",
       }}
