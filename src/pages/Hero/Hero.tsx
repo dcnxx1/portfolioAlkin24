@@ -17,7 +17,7 @@ export default function Hero() {
             in het ontwikkelen van schaalbare applicaties
           </DescriptionText>
           <DescriptionText style={{ fontSize: 22, fontWeight: "normal" }}>
-            Ervaring met diverse technologieen zoals React, React Native,
+            Ervaring met diverse technologieën zoals React, React Native,
             NodeJS, AWS, Cloud Computing, Front-end en Back-end ontwikkeling.
           </DescriptionText>
         </Content>
