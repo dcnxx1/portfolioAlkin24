@@ -3,10 +3,12 @@ import Card from "../../components/Card/Card";
 import LaptopAlktunes from "../../assets/project-assets/alktunes/alktunes_laptop.svg";
 import IphoneTurnt from "../../assets/project-assets/turnt/iphone_turnt.svg";
 
+import SamsungCacaoChat from "../../assets/project-assets/cacaochat/SamsungCacaoChat.svg";
 import iPhoneKelli from "../../assets/project-assets/kelli/iPhone_kelli.svg";
 import iMacQrCode from "../../assets/project-assets/qrCode/iMacQrCode.svg";
-import SamsungCacaoChat from "../../assets/project-assets/cacaochat/iMacQrCode.svg";
-import { Grid, Container, InnerContainer } from "./ProjectPage.styled";
+import { Column, FlexContainer } from "./ProjectPage.styled";
+
+import Container from "../../components/Container/Container";
 import { HeaderText } from "../Projects/Turnt/Turnt.styled";
 
 interface Props {
@@ -15,16 +17,14 @@ interface Props {
 
 export default function ProjectPage({}: Props) {
   return (
-    <Container style={{ paddingBlock: "10px" }}>
-      <InnerContainer>
-        <HeaderText id="Projects">Projecten</HeaderText>
-        <Grid style={{ padding: 10 }}>
+    <Container>
+      <FlexContainer>
+        <HeaderText style={{paddingLeft: 10}}>Projecten</HeaderText>
+        <Column>
           <Card linkTo={"/turnt"} color1="#ea698b" color2="#8b23d1">
             <Card.Image source={IphoneTurnt} />
             <Card.Title>Turnt</Card.Title>
-            <Card.Description>
-              Ontdek muziek in slechts 30 seconden
-            </Card.Description>
+            <Card.Description>Ontdek muziek in 30 seconden</Card.Description>
           </Card>
           <Card linkTo={"/alktunes"} color1="#000000" color2="#6c6a6d">
             <Card.Image source={LaptopAlktunes} />
@@ -33,10 +33,12 @@ export default function ProjectPage({}: Props) {
               Luister naar je favoriete artiesten
             </Card.Description>
           </Card>
+        </Column>
+        <Column>
           <Card linkTo={"/kelli"} color1="#ffb900" color2="#ee9b0f">
             <Card.Image source={iPhoneKelli} />
             <Card.Title>Kelli</Card.Title>
-            <Card.Description>Laat je woorden tot leven komen</Card.Description>
+            <Card.Description>Laat Je Woorden Tot Leven Komen</Card.Description>
           </Card>
           <Card linkTo={"/qrcode"} color1="#d63879" color2="#701d3f">
             <Card.Image source={iMacQrCode} />
@@ -45,15 +47,29 @@ export default function ProjectPage({}: Props) {
               Scan, Deel, Vergemakkelijk: QRCode
             </Card.Description>
           </Card>
+        </Column>
+        <Column>
           <Card linkTo={"/cacaochat"} color1="#ffffff" color2="#e4e4e4">
             <Card.Image source={SamsungCacaoChat} />
             <Card.Title style={{ color: "black" }}>CacaoChat</Card.Title>
             <Card.Description style={{ color: "black" }}>
-              Chatten over de hele wereld
+              Chatten Over De Hele Wereld
             </Card.Description>
           </Card>
-        </Grid>
-      </InnerContainer>
+          <Card
+            style={{ pointerEvents: "none", opacity: 0, cursor: "auto" }}
+            linkTo={"/cacaochat"}
+            color1="#ffffff"
+            color2="#e4e4e4"
+          >
+            <Card.Image source={SamsungCacaoChat} />
+            <Card.Title>Turnt</Card.Title>
+            <Card.Description>Ontdek muziek in 30 seconden</Card.Description>
+          </Card>
+        </Column>
+      </FlexContainer>
     </Container>
+
+
   );
 }

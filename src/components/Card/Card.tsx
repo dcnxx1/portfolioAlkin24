@@ -8,10 +8,10 @@ import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 
 interface Props {
-  color1: string;
-  color2: string;
-  children: ReactNode;
-  linkTo: string;
+  color1?: string;
+  color2?: string;
+  children?: ReactNode;
+  linkTo?: string;
   style?: CSSProperties;
 }
 
@@ -31,16 +31,11 @@ export default function Card({
     : `/projects${linkTo}`;
 
   return (
-    <Container style={style} color1={color1} color2={color2}>
-      <LinkToProjectPage
-        style={{ textAlign: "center", textDecoration: "none" }}
-        to={{
-          pathname: adjustedLinkTo,
-        }}
-      >
+    <LinkToProjectPage style={style} to={{ pathname: adjustedLinkTo }}>
+      <Container style={style} color1={color1} color2={color2}>
         {children}
-      </LinkToProjectPage>
-    </Container>
+      </Container>
+    </LinkToProjectPage>
   );
 }
 
