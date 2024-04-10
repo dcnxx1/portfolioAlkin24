@@ -68,6 +68,7 @@ export default function Turnt() {
             </InfoContainer>
             <PhoneContainer>
               <InViewContainer
+                style={{ borderRadius: "80px" }}
                 fallbackImage={ImageHomeScreen}
                 source={DemoHomeScreen}
               />
@@ -103,6 +104,7 @@ export default function Turnt() {
             </InfoContainer>
             <PhoneContainer>
               <InViewContainer
+                style={{ borderRadius: "80px" }}
                 fallbackImage={ImageUpload}
                 source={DemoAddPlaylist}
               />
@@ -141,6 +143,7 @@ export default function Turnt() {
             </InfoContainer>
             <PhoneContainer>
               <InViewContainer
+                style={{ borderRadius: "80px" }}
                 fallbackImage={ImageAddPlaylist}
                 source={DemoUpload}
               />
