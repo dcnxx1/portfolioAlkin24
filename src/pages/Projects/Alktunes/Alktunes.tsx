@@ -180,6 +180,7 @@ export default function Alktunes() {
                 <TagList.Tag tagName="NodeJS" />
                 <TagList.Tag tagName="ExpressJS" />
                 <TagList.Tag tagName="AWS OpenSearch" />
+                <TagList.Tag tagName="AWS DynamoDB" />
                 <TagList.Tag tagName="Full-Stack" />
                 <TagList.Tag tagName="SASS" />
               </TagList>
