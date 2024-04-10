@@ -18,8 +18,8 @@ interface Props {
 export default function ProjectPage({}: Props) {
   return (
     <Container>
-      <FlexContainer>
-        <HeaderText style={{paddingLeft: 10}}>Projecten</HeaderText>
+      <FlexContainer id="Projects">
+        <HeaderText style={{ paddingLeft: 10 }}>Projecten</HeaderText>
         <Column>
           <Card linkTo={"/turnt"} color1="#ea698b" color2="#8b23d1">
             <Card.Image source={IphoneTurnt} />
@@ -69,7 +69,5 @@ export default function ProjectPage({}: Props) {
         </Column>
       </FlexContainer>
     </Container>
-
-
   );
 }
